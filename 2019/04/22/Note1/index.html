@@ -1,18 +1,213 @@
-<%- partial('_partial/head') %>
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>三维重建相关 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="豪斯多夫距离Hausdorff distance of convex polygons没看完先空着 半边排序-填补孔洞记录如何得到半边的逻辑需要定义边类型，和半边类型 1234567891011121314151617181920212223242526272829303132class myedge&amp;#123;public:	int p1id;	int p2id;	int edge_times">
+<meta name="keywords" content="几何, 三维重建, 植物">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三维重建相关">
+<meta property="og:url" content="http://yoursite.com/2019/04/22/Note1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="豪斯多夫距离Hausdorff distance of convex polygons没看完先空着 半边排序-填补孔洞记录如何得到半边的逻辑需要定义边类型，和半边类型 1234567891011121314151617181920212223242526272829303132class myedge&amp;#123;public:	int p1id;	int p2id;	int edge_times">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-23T05:39:36.286Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="三维重建相关">
+<meta name="twitter:description" content="豪斯多夫距离Hausdorff distance of convex polygons没看完先空着 半边排序-填补孔洞记录如何得到半边的逻辑需要定义边类型，和半边类型 1234567891011121314151617181920212223242526272829303132class myedge&amp;#123;public:	int p1id;	int p2id;	int edge_times">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
 <body>
   <div id="container">
     <div id="wrap">
-      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-      <div class="outer">
-        <section id="main"><%- body %></section>
-        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
-        <% } %>
-      </div>
-      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
     </div>
-    <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
-    <%- partial('_partial/after-footer') %>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Note1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/22/Note1/" class="article-date">
+  <time datetime="2019-04-22T02:12:33.000Z" itemprop="datePublished">2019-04-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      三维重建相关
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="豪斯多夫距离Hausdorff-distance-of-convex-polygons"><a href="#豪斯多夫距离Hausdorff-distance-of-convex-polygons" class="headerlink" title="豪斯多夫距离Hausdorff distance of convex polygons"></a>豪斯多夫距离Hausdorff distance of convex polygons</h1><p>没看完先空着</p>
+<h1 id="半边排序-填补孔洞"><a href="#半边排序-填补孔洞" class="headerlink" title="半边排序-填补孔洞"></a>半边排序-填补孔洞</h1><h3 id="记录如何得到半边的逻辑"><a href="#记录如何得到半边的逻辑" class="headerlink" title="记录如何得到半边的逻辑"></a>记录如何得到半边的逻辑</h3><p>需要定义边类型，和半边类型</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myedge</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> p1id;</span><br><span class="line">	<span class="keyword">int</span> p2id;</span><br><span class="line">	<span class="keyword">int</span> edge_times = <span class="number">0</span>;<span class="comment">// it means the use times of this edge;</span></span><br><span class="line">	<span class="keyword">int</span> edge_valid = <span class="number">0</span>;<span class="comment">// 0 means edge is valid, otherwise it is invalid;</span></span><br><span class="line">	myedge();</span><br><span class="line">	myedge(<span class="keyword">int</span> p1, <span class="keyword">int</span> p2)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (p1 == p2) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"Wrong edge!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			edge_valid = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (p1 &gt; p2) &#123;</span><br><span class="line">			p1id = p2;</span><br><span class="line">			p2id = p1;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			p1id = p1;</span><br><span class="line">			p2id = p2;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> == (<span class="keyword">const</span> myedge &amp;x)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> ((<span class="keyword">this</span>-&gt;p1id == x.p1id) &amp;&amp; (<span class="keyword">this</span>-&gt;p2id) == x.p2id)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>先三角化方法得到初步的网格数据vertics，然后转化为边类型<br>此处需要定义默认构造函数和重载==，因为边的两个点的顺序不确定，因此重载==时即考虑边相等时，两个情况都得考虑</p>
+<p>注意：这里面半边数据结构集中的每个点最多使用两次，若要形成封闭的缺口，那么一定每个点使用两次</p>
+<h2 id="检索孔洞边点的逻辑"><a href="#检索孔洞边点的逻辑" class="headerlink" title="检索孔洞边点的逻辑"></a>检索孔洞边点的逻辑</h2><p>迭代思路-伪码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">fun()</span><br><span class="line">&#123;</span><br><span class="line">    检索点=输入领接表的某一值</span><br><span class="line">    <span class="keyword">if</span>(检索点==初始点)</span><br><span class="line">        <span class="keyword">if</span>(hole中的点集&gt;=<span class="number">3</span>)</span><br><span class="line">            检索到初始点，形成一个孔洞，输出hole <span class="built_in">vector</span>并<span class="keyword">return</span>；</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            说明形成不了孔洞，错误，直接<span class="keyword">return</span>；</span><br><span class="line">    <span class="comment">//上述判断后检索点非初始点，则进行下述步骤</span></span><br><span class="line">    <span class="keyword">if</span>(检索点！=尾点)</span><br><span class="line">            </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/22/Note1/" data-id="cjutdnmtz0001l8v7c0kob7f0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/几何-三维重建-植物/">几何, 三维重建, 植物</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/22/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/几何-三维重建-植物/">几何, 三维重建, 植物</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/几何-三维重建-植物/" style="font-size: 10px;">几何, 三维重建, 植物</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/22/Note1/">三维重建相关</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/22/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
   </div>
 </body>
 </html>
