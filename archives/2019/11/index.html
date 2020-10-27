@@ -346,23 +346,31 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2018/12/12/hello-world/">
+        <a class="abstract-title" href="/2019/11/12/深度学习-三维点云-植物表型/">
             
-                <span>Hello World</span>
+                <span>深度学习-三维点云-植物表型</span>
         </a>
         <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More...
+            主要提取的点云特征：一、主曲率点在平面的移动速度，陡峭程度；
+计算方式：
+Step1：pj(px, py, pz)点的法向量nj(nx, ny, nz)投影到法向量ni(nix, niy, niz)和点pi(pix, piy, piz)构成的切平面，pj是pi的领域点：
+切平面表示：nix (x-pix) + niy (y-piy) + niz (z-piz)=0;
+各点法向量投影表示：
+其中，I是3×3的单位矩阵；
+注:向量 $\vec{n_i} \bigotimes \vec{n_i}$表示两法向量直积，但是个人认为这里应该是发现了的列向量直积列向量转置，否则无法得到3×3的单位矩阵...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/12/12</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/12</span>
             </div>
             <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="三维重建, 植物">三维重建, 植物</a>
+    
+</div>
             
         </div>
     </article>
