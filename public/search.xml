@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2018/12/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>农业三维重建应用框架</title>
+    <url>/2019/07/22/%E5%86%9C%E4%B8%9A%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<h1 id="农业领域三维技术应用"><a href="#农业领域三维技术应用" class="headerlink" title="农业领域三维技术应用"></a>农业领域三维技术应用</h1><h2 id="一、区分"><a href="#一、区分" class="headerlink" title="一、区分"></a>一、区分</h2><h3 id="1、应用场景区分："><a href="#1、应用场景区分：" class="headerlink" title="1、应用场景区分："></a>1、应用场景区分：</h3><p>①农业机械化作业应用：</p>
+<p>机械化机具的重建——机具的修复改进；</p>
+<p>作物对象精细重建——用于识别、分选、筛选；</p>
+<p>②植物表型研究应用：<br>作物对象重建——主要是获取结构信息：植株骨架、叶片面积，用于不同目的研究（例如生长周期结构变化研究，结构模型与光照分布等信息的研究以及动力学模型结构结合研究）；</p>
+<p>③动物形态研究：</p>
+<p>类似植物表型；</p>
+<p>④农业作业大场景范围重建：</p>
+<p>农田、果园、森林等环境重建——用于农机、无人机等设备导航、遥感数据分析等；</p>
+<h3 id="2、应用设备区分"><a href="#2、应用设备区分" class="headerlink" title="2、应用设备区分"></a>2、应用设备区分</h3><p>①双目视觉、多目视觉；</p>
+<p>②深度相机（消费级）；</p>
+<p>③结构光相机；</p>
+<p>④激光雷达；</p>
+<p>⑤三维扫描仪（基于结构光、激光，基于三角测距原理、基于飞行时间原理）；</p>
+<h2 id="二、技术路线"><a href="#二、技术路线" class="headerlink" title="二、技术路线"></a>二、技术路线</h2><p>主要从点云层面说明，基于视觉原理的检测方法最终目的还是获取点云，因此点云数据的处理与分析是与各种研究应用直接相关；</p>
+<h3 id="Step1：点云采集与预处理"><a href="#Step1：点云采集与预处理" class="headerlink" title="Step1：点云采集与预处理"></a>Step1：点云采集与预处理</h3><p>（视觉方法目的就是完成该步骤中的点云采集）</p>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>精度</th>
+<th>操作便携性</th>
+<th>采集算法难度</th>
+<th>成本</th>
+<th>问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>视觉方法</td>
+<td>高</td>
+<td>相对复杂</td>
+<td>复杂</td>
+<td>低</td>
+<td>噪声和点云质量受算法影响大</td>
+</tr>
+<tr>
+<td>深度相机</td>
+<td>低</td>
+<td>适中</td>
+<td>简单</td>
+<td>低</td>
+<td>点云质量低，噪声大</td>
+</tr>
+<tr>
+<td>结构光相机</td>
+<td>高</td>
+<td>便携-适中</td>
+<td>适中</td>
+<td>高</td>
+<td>受环境光影响大</td>
+</tr>
+<tr>
+<td>激光扫描仪</td>
+<td>高</td>
+<td>便携-适中</td>
+<td>简单</td>
+<td>高</td>
+<td>只能获取点云信息，且大多需贴点处理</td>
+</tr>
+</tbody>
+</table>
+<p>预处理目的——提高点云质量，包括（下列几点无先后顺序）：</p>
+<p>①降噪：采用平滑算法、滤波算法、采集时重复采用取平均等方法消除点云高频噪声、离群噪声、飞行点噪声等；</p>
+<p>②背景剔除：仅保留目标对象点云；</p>
+<h3 id="Step2：点云数据配准"><a href="#Step2：点云数据配准" class="headerlink" title="Step2：点云数据配准"></a>Step2：点云数据配准</h3><p>该步骤主要目的是将多个不同视角下的点云统一到同一个坐标系下；且该步骤对于需要进行多角度情况需要进行重建，对于单角度应用情况非必须步骤；</p>
+<p>主要步骤分为<br>1、粗配准：快速的配准方法，减少对应点的旋转、平移差距，为精配准服务；</p>
+<p>步骤：计算特征子，寻找特征子点集的对应点集，并计算旋转、平局矩阵；</p>
+<p>经典算法：基于FPFH的粗配准；</p>
+<p>算法具体：</p>
+<p>2、精配准：准确的配准方法；</p>
+<p>步骤：对于所有点进行匹配，使得满足目标函数最小化，迭代过程是收敛的；</p>
+<p>经典算法：ICP算法及其变种算法；</p>
+<p>算法具体：</p>
+<h3 id="Step3：点云优化"><a href="#Step3：点云优化" class="headerlink" title="Step3：点云优化"></a>Step3：点云优化</h3><p>经过配准后的点云数据存在：点云数量大，点云密集，配准后存在噪声，点云分层等问题，需要进一步优化；优化的思路：具体问题具体分析；</p>
+<p><strong>点云数量大，点云密集：</strong>降采样，体素格采样等；</p>
+<p><strong>配准后存在噪声：</strong>离群滤波处理，平滑算法处理等；</p>
+<p><strong>分层现象：</strong>特定算法处理；</p>
+<h3 id="Step4：点云基础上的多种处理"><a href="#Step4：点云基础上的多种处理" class="headerlink" title="Step4：点云基础上的多种处理"></a>Step4：点云基础上的多种处理</h3><p>1、网格处理：使点云数据面片化，建立点与点之间的拓扑关系，可使其后续可计算面积信息、添加纹理信息等；</p>
+<p>具体算法：Delauney三角化网格算法、贪婪三角化网格方法、posson网格等；</p>
+<p>Delauney网格方法思路具体介绍：</p>
+<p>2、骨架提取：点云核心结构的提取，简并数据；</p>
+<p>单一骨架可以反馈植株的结构性状，从而研究叶倾角等信息；</p>
+<p>对于动物而言，骨架课反馈动物动作变化等信息，实现动物行为检测等；</p>
+<p>方法思路具体介绍：</p>
+<p>3、对象分割识别：</p>
+<h3 id="Step5：实际应用具体分析"><a href="#Step5：实际应用具体分析" class="headerlink" title="Step5：实际应用具体分析"></a>Step5：实际应用具体分析</h3><p>农业领域该技术通常都是辅助技术，因此该技术的应用都是需要结合具体问题进行；</p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>三维重建, 植物</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习-三维点云-植物表型</title>
+    <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
+<p>计算方式：</p>
+<p>Step1：pj(px, py, pz)点的法向量nj(nx, ny, nz)投影到法向量ni(nix, niy, niz)和点pi(pix, piy, piz)构成的切平面，pj是pi的领域点：</p>
+<p>切平面表示：nix (x-pix) + niy (y-piy) + niz (z-piz)=0;</p>
+<p>各点法向量投影表示：<img src="/2019/11/12/深度学习-三维点云-植物表型/1573521660696.png" alt="1573521660696"></p>
+<p>其中，I是3×3的单位矩阵；</p>
+<p>注:向量 $\vec{n_i} \bigotimes \vec{n_i}$表示两法向量直积，但是个人认为这里应该是发现了的列向量直积列向量转置，否则无法得到3×3的单位矩阵，最后得到矩阵a应该是:<br>$$<br>a = \left[<br>\matrix{<br>nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; niz·niz \<br>}<br>\right]<br>$$<br>I-a得到矩阵<br>$$<br>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; 1-niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; 1-niz·niz \<br>}<br>\right]<br>$$<br>得到投影向量$\vec{m}$=<br>$$<br>\matrix{<br>(1-nix·nix)·nx+nix·niy·ny+nix·niz·nz,\<br>niy·nix·nx+(1-niy·niy)·ny+niy·niz·nz,\<br>niz·nix·nz+niz·niy·ny+(1-niz·niz)·nz, \<br>}<br>$$<br>然后计算协方差的特征向量得到三个λ，则通过大小排序可得到最大与最小曲率以及曲率方向</p>
+<p><img src="/2019/11/12/深度学习-三维点云-植物表型/1573525802291.png" alt="1573525802291"></p>
+<p>#二、半径表面特征</p>
+<p>得到设定半径内，领域点与计算点的法线夹角与亮点距离，这两个统一作为一个特征；</p>
+<h1 id="三、PFH点特征直方图"><a href="#三、PFH点特征直方图" class="headerlink" title="三、PFH点特征直方图"></a>三、PFH点特征直方图</h1><p>加快的还有FPFH</p>
+<p>#四、SHOT 方向直方图特征</p>
+<p>Signature of histogram of orientations</p>
+<p>构造方法：以查询点p为中心构造半径为r 的球形区域，沿径向、方位、俯仰3个方向划分网格，其中径向2次，方位8次（为简便图中径向只划分了4个），俯仰2次划分网格，将球形区域划分成32个空间区域。在每个空间区域计算计算落入该区域点的法线nv和中心点p法线np之间的夹角余弦cosθ=nv·np，再根据计算的余弦值对落入每一个空间区域的点数进行直方图统计，对计算结果进行归一化，使得对点云密度具有鲁棒性，得到一个352维特征。（原论文：Unique Signatures of Histograms for Local Surface）<br><img src="/2019/11/12/深度学习-三维点云-植物表型/1573528340406.png" alt="1573528340406"></p>
+<p>#五、Spin image旋转图像</p>
+<p><a href="https://blog.csdn.net/renyuanxingxing/article/details/83279328" target="_blank" rel="noopener">https://blog.csdn.net/renyuanxingxing/article/details/83279328</a></p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>三维重建, 植物</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三维重建--网格孔洞识别填补(二)————缺陷孔洞识别</title>
+    <url>/2019/05/01/fill-Holes/</url>
+    <content><![CDATA[<h1 id="缺陷孔洞识别"><a href="#缺陷孔洞识别" class="headerlink" title="缺陷孔洞识别"></a>缺陷孔洞识别</h1><h2 id="缺陷孔洞与非缺陷孔洞区别-借鉴思路"><a href="#缺陷孔洞与非缺陷孔洞区别-借鉴思路" class="headerlink" title="缺陷孔洞与非缺陷孔洞区别-借鉴思路"></a>缺陷孔洞与非缺陷孔洞区别-借鉴思路</h2><p>之前孔洞识别将所有封闭换都识别出来，但是存在的问题是，本身是封闭的正常部分也被识别，因此需要通过将两者区分开来；下图中都为所有孔洞，第三幅图中底部的圆孔为非缺陷孔洞，需要剔除。</p>
+<p><img src="/2019/05/01/fill-Holes/多种孔洞情况.jpg" alt="多种孔洞情况"></p>
+<p><strong>缺陷孔洞的检测方法思路</strong></p>
+<p>从孔洞的几何特性进行区分：</p>
+<p>①周边表面不规则性；</p>
+<p>②轮廓曲线不规则性；</p>
+<p>步骤</p>
+<p>1、通过曲率估计的方法对孔洞轮廓周边的点集进行聚类，表示方式有高斯曲率、平均曲率（这两者不一定适合），形状索引<a href="https://www.sciencedirect.com/science/article/pii/026288569290076F" title="形状索引" target="_blank" rel="noopener">1</a>，是范围（-1，+ I）中的数字，是尺度不变的。形状指数特别好地捕捉了“局部形状”的直观概念。形状指数可以映射到直观的自然色标。形状索引用于描述曲面上任意点在表面领域二极结构的一种方法：</p>
+<p><img src="/2019/05/01/fill-Holes/公式1.png" alt="公式1"></p>
+<p>周边聚类的质心i的形状索引为：</p>
+<p><img src="/2019/05/01/fill-Holes/公式2.png" alt="公式2"></p>
+<p>2、通过对轮廓曲线的曲率与扭力两个几何特性进行区分。通过测量轮廓的切向量变化来判断是否为缺陷孔洞；</p>
+<p>文章里说缺陷孔洞的切线变化是杂乱无章的，非缺陷孔洞在切线角度上的变化是平滑过渡的。</p>
+<p><img src="/2019/05/01/fill-Holes/缺陷孔洞.png" alt="缺陷孔洞"></p>
+<p><img src="/2019/05/01/fill-Holes/切线与法线分布.png" alt="切线与法线分布"></p>
+<h2 id="实际情况"><a href="#实际情况" class="headerlink" title="实际情况"></a>实际情况</h2><p>植株的实际情况不同：</p>
+<p><img src="/2019/05/01/fill-Holes/实际孔洞情况.png" alt="实际孔洞情况"></p>
+<p>小型孔洞（多为缺陷孔洞，如上图-右）个点法向量较为一致，差异较小；</p>
+<p>大型孔洞（如上图-中）法向量部分超圆内，部分朝圆外，差异较大；</p>
+<p>按照上述思路，通过法向量差异进行判断，那么法向量差异小的为缺陷孔洞，法向量差异大的为非缺陷孔洞；</p>
+<p>思路：依次获取孔洞个点的法向量，并比较向量两点法向量的角度差，即每条边两个顶点的角度差，计算平均角度差与标准角度偏差，小于设定阈值为缺陷孔洞，否则不为缺陷孔洞</p>
+<p>伪码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;vertex&gt;&gt;holes_out;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;holes.size();i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt;angleall;</span><br><span class="line">    <span class="keyword">double</span> sumangle=getangle(holes.at(i).at(<span class="number">0</span>),holes.at(i).at(holes.size()<span class="number">-1</span>));</span><br><span class="line">    angleall.push_back(sumangle);</span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;holes.at(i).size()<span class="number">-1</span>;j++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">double</span> tempangle=getangle(holes.at(j).at(<span class="number">0</span>),holes.at(i).at(j+<span class="number">1</span>));</span><br><span class="line">        sumagle += tempangle;</span><br><span class="line">        angleall.push_back(tempangle);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">double</span> aveangle=sumangle/holes.at(i).siez();</span><br><span class="line">    <span class="keyword">double</span> Nrmse2=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;angleall.size();k++)</span><br><span class="line">    &#123;</span><br><span class="line">        Nrmse2+=(angleall.at(k)-aveangle)*(angleall.at(k)-aveangle);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">double</span> rmse=<span class="built_in">sqrt</span>(Nrmse2*<span class="number">1.0</span>/angleall.size());</span><br><span class="line">    <span class="keyword">if</span>(rmse&lt;threshold1 &amp;&amp; aveangle &lt;threshold2)</span><br><span class="line">    &#123;</span><br><span class="line">        holes_out.pushback(holes.at(i));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>##结果</p>
+<p>设定平均角度阈值为0.4（22.9°），rmse阈值为0.5</p>
+<p><img src="/2019/05/01/fill-Holes/ave0.4-rmse0.5.png" alt="ave0.4-rmse0.5"></p>
+<p>设定平均角度阈值为0.2（11.45°），rmse阈值为0.5</p>
+<p><img src="/2019/05/01/fill-Holes/ave0.2-rmse0.5_2.png" alt="ave0.2-rmse0.5_2"></p>
+<p>设定平均角度阈值为0.4（22.9°），rmse阈值为0.3</p>
+<p><img src="/2019/05/01/fill-Holes/ave0.4-rmse0.3.png" alt="ave0.4-rmse0.3"></p>
+<p>设定平均角度阈值为0.6（33.4°），rmse阈值为0.3</p>
+<p><img src="/2019/05/01/fill-Holes/ave0.6-rmse0.3.png" alt="ave0.6-rmse0.3"></p>
+<p>设定平均角度阈值为0.6（33.4°），rmse阈值为0.1</p>
+<p><img src="/2019/05/01/fill-Holes/ave0.6-rmse0.1.png" alt="ave0.6-rmse0.1"></p>
+<p>设定平均角度阈值为0.4（22.9°），rmse阈值为0.3</p>
+<p>因此，平均角度阈值与rmse阈值对于孔洞有一定效果</p>
+<p>但是仍存在一些问题：不封闭孔洞，以及半边数据构成的孔洞实际为单独的面片结构。</p>
+<h1 id="相关引申资料概念"><a href="#相关引申资料概念" class="headerlink" title="相关引申资料概念"></a>相关引申资料概念</h1><h3 id="平均形状概念"><a href="#平均形状概念" class="headerlink" title="平均形状概念"></a>平均形状概念</h3><p>基于形状索引特征的平均值</p>
+<h3 id="形状索引特征概念"><a href="#形状索引特征概念" class="headerlink" title="形状索引特征概念"></a>形状索引特征概念</h3><p>一种特征描述子，与形状相关，可有曲率、法向量等信息表示；</p>
+<h2 id="图形特征"><a href="#图形特征" class="headerlink" title="图形特征"></a>图形特征</h2><h3 id="对象识别特征"><a href="#对象识别特征" class="headerlink" title="对象识别特征"></a>对象识别特征</h3><p>1、对于类间变化敏感，有效区分对象与背景；</p>
+<p>2、类内不变形，对同一个对象在不同的角度、光照、表情（人体）、弯曲情况（植株叶片）的变化具有一定的不不变性。手工特征：Gabor，LBP，SIFT；无监督学习：LE；</p>
+<h3 id="导数表"><a href="#导数表" class="headerlink" title="导数表"></a>导数表</h3><p><img src="/2019/05/01/fill-Holes/导数表.png" alt="导数表"></p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>几何, 三维重建, 植物</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>生活-学习-爱情</title>
+    <url>/2020/10/27/%E7%94%9F%E6%B4%BB-%E5%AD%A6%E4%B9%A0-%E7%88%B1%E6%83%85/</url>
+    <content><![CDATA[<p>本来想把这个个人主页做成技术站，现实是技术突破太慢，久久难以更新。嗨，反正是个人主页，想放什么放什么，也无所谓了。也是想来很久没写东西，近期生活枯燥而波动，个人情绪始终不是特别的高昂，稍稍记录一下。</p>
+<p><strong>有关学习</strong></p>
+<p>​        学习是我唯一坚持这么多年的事，但是实际上读研之后，更多的是在赶工赶进度，做导师的项目，完成导师的任务，一年下来真正静下心来好好学习的时间寥寥无几。也不全怪导师，从小到大一直在区域拔尖的学校学习，多多少少有点自傲。浮躁，焦虑，伴随我3年半的情绪始终是影响个人工作状态的两大因素，挥之不去。所幸，现实打脸的很快，我也不过是平平常常的普通人，膨胀的状态没有维持多久变气馁了下来，自信心挫败的感觉并不好受。每个人对生活的都有本质的态度，表面上的乐观并无法改变骨子里的悲观。所幸我认为人要死的有价值，所以我怕死，至少不会干出自杀这种事。这种不负责，不仁义。也所幸认识了子毅师兄。目前，还是慢慢找状态，沉静下来心来去学。社会很浮躁，适应社会却很违背本心，不适应社会又难以生存。也只能学习了。</p>
+<p><strong>有关生活</strong></p>
+<p>​        今年是特殊的一年，疫情毕业，再次感受到了别离。可能是上了年纪，以前是对到一个新的地方充满期待，现在则是希望一群朋友就呆在一个地方温馨和谐。但是生活别离才是常态。嗨，毕业的同学们，有机会再聚。小两级的师弟师妹们充满了活力，是青春的力量，偶尔跟他们一起活动感觉到了年轻的感觉。明明只大了2级，大概两三岁的样子，心态感觉就和他们差了好多。可能我适合安居一隅吧。很让我感动的是王唯师姐，让我感受到亲姐的感觉，很贴心很细心，少有的感动。生活还是这样波澜不惊，以前挺喜欢杭州的，但可能是因为这群朋友，现在朋友都陆陆续续开始他们新的人生了。我对杭州腻了。</p>
+<p><strong>有关爱情</strong></p>
+<p>​        这几天，堂哥给我介绍了一个在杭州工作的女生，可能是自信心挫败带来的轻微社恐，其实是在堂哥第二次跟我说的时候我才去加了那个女生。第一次经历网络相亲，很突然没准备也跃跃欲试。这可能也算是尝试新的东西？加了女生之后聊了两次，感觉女生很温柔，讲话令人感到舒服，自律优秀，也是文艺附加漂亮。第一印象很好，好到让我妄自菲薄。尽管读到博士，社会不少人对博士还是有一定认可，但是自己心里有数，自己只是普通人，学历并不代表一切。找一个能读懂自己的人，是妹子的想法，也同样是我的想法。生活那么匆忙，人来人往中都是匆匆掠过，可能掀起短暂的波澜，但并没有什么实质的影响。没有长久的相处就无法有深入的了解。一直对这事很谨慎，尽管口嗨想找妹子，但是确实是想慢慢的深入的去了解一个人。可惜生活并不是理想，身边的人越来越多结婚生子的，份子钱，晒娃，都在提醒我这个年纪了你怎么还是单身。所以焦急而又淡定，很矛盾的心理，我不想急急燥燥的定下人生后半旅程的伴侣，但是又无奈始终单身的现状。但是，真正碰到对的人，是快是慢？</p>
+<p>​        这是第一次网络相亲，不确定是否能和这个女生慢慢了解下去，也不确定以后是否还会经历这样的相亲，但是毕竟是第一次经历，记录一下。</p>
+<p><strong>关于股票</strong></p>
+<p>​        半年时间，收益从25%跌倒10%不到，贪婪是难以消除的劣根性，把期待寄托于市场以及他人的建议，不如自己研究制定良好的买卖策略，亏本不急躁，盈利不贪婪，在股市里保持良好的操盘心态。</p>
+<p>​        学习室的空气还是一样的闷热，坐久了就会让我头脑发胀，身边的人还是忙碌着。依旧是等待着毕业，等待着明天。</p>
+<p>​        一片杂文，没有逻辑，只是记录。</p>
+<p>​        嗨，好久没用博客了，忘记怎么上传了，又得折腾一点时间 = =。</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>生活，思考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文与汇报注意点</title>
+    <url>/2018/12/12/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%B1%87%E6%8A%A5%E6%B3%A8%E6%84%8F%E7%82%B9/</url>
+    <content><![CDATA[<h1 id="英文展示注意"><a href="#英文展示注意" class="headerlink" title="英文展示注意"></a>英文展示注意</h1><p>1、图的效果讲下就够，不一定要详细描述图的细节</p>
+<p>2、highlight重要的词</p>
+<p>3、英文冒号用的不多</p>
+<p>4、中英文标点符号统一</p>
+<p>5、ppt字号英文24及以上，中文18及以上</p>
+<p>6、英文报告ppt字体选择  arial  或者calibri</p>
+<p>6、字体颜色不要花里胡哨，常规一点</p>
+<p>7、放一张大的图，一个标题或一句话说明图的内容(在有很多图类似图的情况下)</p>
+<p>8、<strong>研究意义、创新性是最重要的</strong></p>
+<p>9、</p>
+<h1 id="论文写作注意"><a href="#论文写作注意" class="headerlink" title="论文写作注意"></a>论文写作注意</h1><h2 id="英文摘要部分"><a href="#英文摘要部分" class="headerlink" title="英文摘要部分"></a>英文摘要部分</h2><p>1、根据不同期刊，字数要求注意；</p>
+<p>2、</p>
+]]></content>
+      <categories>
+        <category>Writing</category>
+      </categories>
+      <tags>
+        <tag>论文写作, 汇报注意</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>骨架提取</title>
+    <url>/2019/07/12/%E9%AA%A8%E6%9E%B6%E6%8F%90%E5%8F%96/</url>
+    <content><![CDATA[<h1 id="骨架提取主要分为两种类型"><a href="#骨架提取主要分为两种类型" class="headerlink" title="骨架提取主要分为两种类型"></a>骨架提取主要分为两种类型</h1><p>1、体积法；</p>
+<p>2、几何法；</p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>几何, 三维重建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三维重建--网格孔洞识别填补(一)————孔洞识别</title>
+    <url>/2019/04/22/Note1/</url>
+    <content><![CDATA[<h1 id="半边排序-填补孔洞"><a href="#半边排序-填补孔洞" class="headerlink" title="半边排序-填补孔洞"></a>半边排序-填补孔洞</h1><h3 id="记录如何得到半边的逻辑"><a href="#记录如何得到半边的逻辑" class="headerlink" title="记录如何得到半边的逻辑"></a>记录如何得到半边的逻辑</h3><p>根据delauney算法，若一条边最多被两个面共用，若一条边只被共用一次那么即为半边，只有半边可以形成孔洞，需要定义边类型，和半边类型</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myedge</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> p1id;</span><br><span class="line">	<span class="keyword">int</span> p2id;</span><br><span class="line">	<span class="keyword">int</span> edge_times = <span class="number">0</span>;<span class="comment">// the use times of this edge;</span></span><br><span class="line">	<span class="keyword">int</span> edge_valid = <span class="number">0</span>;<span class="comment">// edge_valid = 0， edge is valid, otherwise  invalid;</span></span><br><span class="line">	myedge();</span><br><span class="line">	myedge(<span class="keyword">int</span> p1, <span class="keyword">int</span> p2)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (p1 == p2) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"Wrong edge!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			edge_valid = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (p1 &gt; p2) &#123;</span><br><span class="line">			p1id = p2;</span><br><span class="line">			p2id = p1;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			p1id = p1;</span><br><span class="line">			p2id = p2;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> == (<span class="keyword">const</span> myedge &amp;x)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> ((<span class="keyword">this</span>-&gt;p1id == x.p1id) &amp;&amp; (<span class="keyword">this</span>-&gt;p2id) == x.p2id)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>先三角化方法得到初步的网格数据vertics，然后转化为边类型<br>此处需要定义默认构造函数和重载==，因为边的两个点的顺序不确定，因此重载==时即考虑边相等时，两个情况都得考虑</p>
+<p>注意：这里面半边数据结构集中的每个点最多使用两次，若要形成封闭的缺口，那么一定每个点使用两次</p>
+<p>通过收入所有三角网格的边，并以端点&lt;v1,v2&gt;的形式保存，v1&lt;v2,然后计数每条边出现的次数，出现一次的为半边，其余的都为非半边删除</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isSameEdge</span><span class="params">(myedge e1, myedge e2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (e1.p1id == e2.p1id&amp;&amp;e1.p2id == e2.p2id)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isInfront</span><span class="params">(myedge e1, myedge e2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (e1.p1id == e2.p1id)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (e1.p2id &lt;= e2.p2id)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (e1.p1id &lt; e2.p1id)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// get half edges，and save into vector</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getHalfEdge</span><span class="params">(PolygonMesh &amp;mesh1, <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;myedge&gt; &amp;halfedges_out)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">// get halfedge;</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;myedge&gt; halfedges;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mesh1.polygons.size(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> p1 = mesh1.polygons.at(i).vertices[<span class="number">0</span>];</span><br><span class="line">		<span class="keyword">int</span> p2 = mesh1.polygons.at(i).vertices[<span class="number">1</span>];</span><br><span class="line">		<span class="keyword">int</span> p3 = mesh1.polygons.at(i).vertices[<span class="number">2</span>];</span><br><span class="line">		<span class="function">myedge <span class="title">e1</span><span class="params">(p1, p2)</span></span>;</span><br><span class="line">		<span class="function">myedge <span class="title">e2</span><span class="params">(p2, p3)</span></span>;</span><br><span class="line">		<span class="function">myedge <span class="title">e3</span><span class="params">(p3, p1)</span></span>;</span><br><span class="line">		<span class="keyword">if</span> (e1.edge_valid == <span class="number">0</span>)</span><br><span class="line">			halfedges.push_back(e1);</span><br><span class="line">		<span class="keyword">if</span> (e2.edge_valid == <span class="number">0</span>)</span><br><span class="line">			halfedges.push_back(e2);</span><br><span class="line">		<span class="keyword">if</span> (e3.edge_valid == <span class="number">0</span>)</span><br><span class="line">			halfedges.push_back(e3);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;myedge&gt;::iterator begin_pos = halfedges.begin();</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;myedge&gt;::iterator end_pos = halfedges.end();</span><br><span class="line">	<span class="built_in">std</span>::sort(halfedges.begin(), halfedges.end(), isInfront);</span><br><span class="line">	<span class="comment">// above process is to get all edges(includeing halfedges and whole edges) and take them in order</span></span><br><span class="line">	<span class="comment">// if the edgd showed twice, it is not the halfedges</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;myedge&gt; halfedges_copy;</span><br><span class="line">	halfedges_copy = halfedges;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;myedge&gt;::iterator new_end = <span class="built_in">std</span>::unique(halfedges.begin(), halfedges.end(), isSameEdge);</span><br><span class="line">	halfedges.erase(new_end, end_pos);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Counts</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; halfedges.size() - <span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">auto</span> begin_temp =</span><br><span class="line">			find(halfedges_copy.begin(), halfedges_copy.end(), halfedges.at(i));</span><br><span class="line">		<span class="keyword">auto</span> end_temp =</span><br><span class="line">			find(halfedges_copy.begin(), halfedges_copy.end(), halfedges.at(i + <span class="number">1</span>));</span><br><span class="line">		halfedges.at(i).edge_times = end_temp - begin_temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// get halfedges</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; halfedges.size() - <span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (halfedges.at(i).edge_times == <span class="number">1</span>)</span><br><span class="line">			halfedges_out.push_back(halfedges.at(i));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; halfedges_out.size() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="检索孔洞逻辑"><a href="#检索孔洞逻辑" class="headerlink" title="检索孔洞逻辑"></a>检索孔洞逻辑</h2><p>步骤：</p>
+<p>1、通过邻接表保存半边</p>
+<p>2、通过递归的方式剔除半边中的端点，即不能形成闭环的点，即只被一条边共用的端点；</p>
+<p>3、识别孔洞</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> recursion_times = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeleteEndPoint</span><span class="params">(Lgraph gp, <span class="keyword">int</span> searchsize)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Recursion times is: "</span> &lt;&lt; recursion_times &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; deleteID;</span><br><span class="line">	<span class="comment">// 由于find的得到的是第几个节点，因此得到n还需+1，因此链表下标从0开始</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i1 = <span class="number">0</span>; i1 &lt; searchsize; i1++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> len = getlen(gp-&gt;G[i1]);</span><br><span class="line">		<span class="keyword">if</span> (len==<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			deleteID.push_back(i1);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (deleteID.size() != <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; deleteID.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">5485</span>; j &lt; searchsize; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> len = getlen(gp-&gt;G[j]);<span class="comment">//当邻接表表长为0的时候说明是空表，</span></span><br><span class="line">				<span class="keyword">if</span>(len==<span class="number">0</span>)</span><br><span class="line">					<span class="keyword">continue</span>;</span><br><span class="line">				<span class="keyword">auto</span> temp = delete_Vertex(deleteID.at(i), gp-&gt;G[j].FirstEdge);</span><br><span class="line">				gp-&gt;G[j].FirstEdge = temp;</span><br><span class="line">				gp-&gt;G[deleteID.at(i)].FirstEdge = <span class="literal">NULL</span>;</span><br><span class="line">				<span class="comment">/*if (gp-&gt;G[j].FirstEdge-&gt;Next == NULL)</span></span><br><span class="line"><span class="comment">					gp-&gt;G[j].FirstEdge = NULL;*/</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		recursion_times++;</span><br><span class="line">		DeleteEndPoint(gp, searchsize);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getHolesmap</span><span class="params">(<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;myedge&gt; &amp;halfedges, Lgraph &amp;ph, <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; &amp;holemap2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// save sa adjacent list</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;pts;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; halfedges.size(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		pts.push_back(halfedges.at(i).p1id);</span><br><span class="line">		pts.push_back(halfedges.at(i).p2id);</span><br><span class="line">	&#125;</span><br><span class="line">	sort(pts.begin(), pts.end());</span><br><span class="line">	pts.erase(unique(pts.begin(), pts.end()), pts.end());</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> searchSize = FindMaxValue(pts);</span><br><span class="line"></span><br><span class="line">	Lgraph graph;</span><br><span class="line">	graph = CreatGraph(pts.size());</span><br><span class="line">	graph-&gt;Ne = halfedges.size();</span><br><span class="line">	<span class="keyword">if</span> (graph-&gt;Ne != <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; graph-&gt;Ne; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			InsertEdge(graph, halfedges.at(i));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// delete end point using recursion</span></span><br><span class="line">	DeleteEndPoint(graph, searchSize);</span><br><span class="line">	ph = graph;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; lens;</span><br><span class="line">	<span class="keyword">int</span> len4 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> len6 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; searchSize; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> lentep = getlen(ph-&gt;G[i]);</span><br><span class="line">		<span class="keyword">if</span> (lentep != <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			lens.push_back(lentep);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">continue</span>;;</span><br><span class="line">		<span class="keyword">if</span> (lentep == <span class="number">4</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			len4++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (lentep == <span class="number">6</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			len6++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Number of points have 4 adjacent points: "</span> &lt;&lt; len4 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Number of points have 6 adjacent points: "</span> &lt;&lt; len6 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在得到孔洞的半边数据后，由于有些点被共用多次，如下图所示</p>
+<p><img src="/2019/04/22/Note1/hole_situation2.jpg" alt="hole_situation"></p>
+<ol>
+<li>情况1表示孔洞所有点只被共用2次；</li>
+<li>情况2表示孔洞红色点被共用4次，其余点被共用2次；</li>
+<li>情况3表示孔洞红色点被共用6次，其余点被共用2次；</li>
+<li>情况4表示多种情况混合，即图中红色点分别被共用6,4次（也可能存在4（4,4），（6,6）等情况的发生），其余点被共用2次；</li>
+</ol>
+<p>因此在采用深度优先搜索算法时需要进行分情况说明，伪码描述为：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;node&gt;&gt; holes;</span><br><span class="line">DFS_hole(vertex v,<span class="built_in">vector</span>&lt;node&gt; out)<span class="comment">//此处仅考虑len=2的情况</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> len=getlen(V); <span class="comment">//获取节点后面的长度，长度为2,4,6</span></span><br><span class="line">    <span class="keyword">if</span>(len==<span class="number">2</span>)<span class="comment">//若这个节点长度是2，说明该节点被4条边共用，属于情况1</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(v.visit==<span class="number">0</span>)<span class="comment">//visit=0说明该节点还未访问过，添加到输出vector out中</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">vector</span>.push_back(v);</span><br><span class="line">            v.visit++;</span><br><span class="line">            v=v.nest;</span><br><span class="line">            DFS_hole(v,out);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//visit=1说明该节点已经被访问，且又回到该节点，那说明该节点是起点且又回到起点，则out里一定有一个闭环，则holes中添加该闭环，并退出梯柜</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(v.visit==<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            holes.push_back(out);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//如果访问≥1次，在len=2时不存在这种情况，所以直接return；</span></span><br><span class="line">        <span class="comment">//不存在的原因时候len=4或len=6时会在生成一个闭环时终止递归，因此对于所有len=2的点最多只可能变量2次</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span>；</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上文仅考虑len=2时的情况，即情况1的情况，然而实际情况中是存在2,3,4三种情况，因此在执行上述深度优先搜索算法提取空洞前，先考虑将这些复杂情况的孔洞情况删除，即从邻接表中删除这些节点并保存至另一复杂孔洞的领接表中，伪码描述为：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//形参：检索起始节点，输入图</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs_complex_holes</span><span class="params">(vnode v, Lgraph listin)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//因为进入这个递归过程中的点，都是复杂情况下的闭环的点，因此标记这些点为复杂闭环圈；</span></span><br><span class="line">    <span class="comment">//标记完后递归</span></span><br><span class="line">    adjacentlist w;</span><br><span class="line">    v.isComplex=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(w=v.firstedge;w;w=w-&gt;next)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(w.next.isComplex==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            dfs_complex_holes(listin-&gt;g[w.vertex],listin);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_complex_holes</span><span class="params">(Lgraph listin，<span class="keyword">int</span> searchtimes，Lgraph listout)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>（<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;searchtimes;i++)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">int</span> len=getlen(listin-&gt;v[i]);</span><br><span class="line">        <span class="keyword">if</span>(len==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//将遍历点都从复杂点开始，即被共用次数为4,6等，除0外</span></span><br><span class="line">            <span class="keyword">if</span>(len!=<span class="number">2</span>)</span><br><span class="line">                dfs_complex_holes(listin-&gt;g[i],listin);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>项目代码，可运行Ver1.0：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//标记含有复杂点的闭环圈，即圈内存在被共用次数＞2的点</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs_complex_holes</span><span class="params">(Vnode v, Lgraph listin)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//因为进入这个递归过程中的点，都是复杂情况下的闭环的点，因此标记这些点为复杂闭环圈；</span></span><br><span class="line">	<span class="comment">//标记完后递归</span></span><br><span class="line">	PtrToAdjVnode w;</span><br><span class="line">	<span class="keyword">if</span> (v.isComplex==<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		listin-&gt;G[v.id].isComplex = <span class="number">1</span>;<span class="comment">// v.isComplex = 1;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (w = v.FirstEdge; w!=<span class="literal">NULL</span>; )</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">auto</span> temp = listin-&gt;G[w-&gt;AdjV];</span><br><span class="line">		<span class="keyword">if</span> ((listin-&gt;G[w-&gt;AdjV].isComplex == <span class="number">0</span>))</span><br><span class="line">		&#123;</span><br><span class="line">			dfs_complex_holes(listin-&gt;G[w-&gt;AdjV], listin);</span><br><span class="line">			<span class="keyword">if</span> (w-&gt;Next == <span class="literal">NULL</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				w = w-&gt;Next;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (w-&gt;Next == <span class="literal">NULL</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				w = w-&gt;Next;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取复杂点</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_complex_holes</span><span class="params">(Lgraph listin, <span class="keyword">int</span> searchtimes)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; searchtimes; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> len = getlen(listin-&gt;G[i]);</span><br><span class="line">		<span class="keyword">if</span> (len == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//将遍历点都从复杂点开始，即被共用次数为4,6等，除0外</span></span><br><span class="line">			<span class="keyword">if</span> (len != <span class="number">2</span>)</span><br><span class="line">				dfs_complex_holes(listin-&gt;G[i], listin);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//深度优先搜索检索孔洞</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS_hole</span><span class="params">(Vnode v, Lgraph listin, <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Vnode&gt; &amp;out,</span></span></span><br><span class="line"><span class="function"><span class="params">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Vnode&gt;&gt; &amp;holes)</span><span class="comment">//此处仅考虑len=2的情况</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//如果该节点是复杂点，则不进入搜索闭环的环节；</span></span><br><span class="line">	<span class="keyword">if</span> (v.isComplex==<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> len = getlen(v); <span class="comment">//获取节点后面的长度，长度为2,4,6</span></span><br><span class="line">	<span class="keyword">if</span> (len == <span class="number">2</span>)<span class="comment">//若这个节点长度是2，说明该节点被4条边共用，属于情况1</span></span><br><span class="line">	&#123;</span><br><span class="line">		PtrToAdjVnode w;</span><br><span class="line">		<span class="keyword">if</span> (v.Visited==<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			listin-&gt;G[v.id].Visited = <span class="number">1</span>;</span><br><span class="line">			out.push_back(v);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (w = v.FirstEdge; w != <span class="literal">NULL</span>; )</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (listin-&gt;G[w-&gt;AdjV].Visited == <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				DFS_hole(listin-&gt;G[w-&gt;AdjV], listin, out, holes);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (w-&gt;Next == <span class="literal">NULL</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				w = w-&gt;Next;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取正常孔洞</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_holes</span><span class="params">(Lgraph ph, <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Vnode&gt;&gt; &amp;holes)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; MaxVertexuUm; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Vnode&gt; temp;</span><br><span class="line">		DFS_hole(ph-&gt;G[i], ph, temp, holes);</span><br><span class="line">		<span class="keyword">if</span> (temp.size()!=<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			holes.push_back(temp);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>识别效果如下：对于正常孔洞已经能较好的识别，但是存在将最外边界的点即形成封闭的叶片轮廓的点也识别为孔洞；同时还有一些其他的面片也易被识别为孔洞，后续需要根据几何性质进行情况分析。</p>
+<p><img src="/2019/04/22/Note1/hole3.png" alt="hole3"></p>
+<p>下一章主要为填补孔洞</p>
+<p>豪斯多夫距离Hausdorff distance of convex polygons这部分没看完，先空着，与评估方法效果有关</p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>几何, 三维重建, 植物</tag>
+      </tags>
+  </entry>
+</search>
