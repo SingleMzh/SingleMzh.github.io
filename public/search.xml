@@ -54,6 +54,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2018/12/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
+  </entry>
+  <entry>
     <title>农业三维重建应用框架</title>
     <url>/2019/07/22/%E5%86%9C%E4%B8%9A%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/</url>
     <content><![CDATA[<h1 id="农业领域三维技术应用"><a href="#农业领域三维技术应用" class="headerlink" title="农业领域三维技术应用"></a>农业领域三维技术应用</h1><h2 id="一、区分"><a href="#一、区分" class="headerlink" title="一、区分"></a>一、区分</h2><h3 id="1、应用场景区分："><a href="#1、应用场景区分：" class="headerlink" title="1、应用场景区分："></a>1、应用场景区分：</h3><p>①农业机械化作业应用：</p>
@@ -151,23 +168,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2018/12/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Others</category>
-      </categories>
-  </entry>
-  <entry>
     <title>深度学习-三维点云-植物表型</title>
     <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
@@ -195,6 +195,18 @@
       </tags>
   </entry>
   <entry>
+    <title>琐事2020.10.28</title>
+    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
+    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告，</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>生活，思考</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>生活-学习-爱情</title>
     <url>/2020/10/27/%E7%94%9F%E6%B4%BB-%E5%AD%A6%E4%B9%A0-%E7%88%B1%E6%83%85/</url>
     <content><![CDATA[<p>本来想把这个个人主页做成技术站，现实是技术突破太慢，久久难以更新。嗨，反正是个人主页，想放什么放什么，也无所谓了。也是想来很久没写东西，近期生活枯燥而波动，个人情绪始终不是特别的高昂，稍稍记录一下。</p>
@@ -210,18 +222,6 @@
 <p>​        学习室的空气还是一样的闷热，坐久了就会让我头脑发胀，身边的人还是忙碌着。依旧是等待着毕业，等待着明天。</p>
 <p>​        一片杂文，没有逻辑，只是记录。</p>
 <p>​        嗨，好久没用博客了，忘记怎么上传了，又得折腾一点时间 = =。</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>生活，思考</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>琐事2020.10.28</title>
-    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
-    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告，</p>
 ]]></content>
       <categories>
         <category>Life</category>
@@ -251,31 +251,6 @@
       </categories>
       <tags>
         <tag>论文写作, 汇报注意</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>骨架提取</title>
-    <url>/2019/07/12/%E9%AA%A8%E6%9E%B6%E6%8F%90%E5%8F%96/</url>
-    <content><![CDATA[<h1 id="骨架提取"><a href="#骨架提取" class="headerlink" title="骨架提取"></a>骨架提取</h1><p>骨架提取的几种核心思路：</p>
-<p>寻找约束中心，收缩领域模型（网格或是点云），体素格+八叉树细致划分</p>
-<p>L1-骨架提取方法：</p>
-<p>生成随机中心（此处用体素格降采样得到初始骨架中心代替）</p>
-<p>正则化处理，邻域检索做文章</p>
-<p>收敛过度是问题，如何改善可以做文章</p>
-<p>现有结果：</p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151235620-1603869711911.png" alt="image-20201028151235620"></p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151248962-1603869694010.png" alt="image-20201028151248962"></p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151258843-1603869673849.png" alt="image-20201028151258843"></p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151306930-1603869618998.png" alt="image-20201028151306930"></p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151322133-1603869599662.png" alt="image-20201028151322133"></p>
-<video id="video" controls preload="none">     <source id="mp4" src="D:/SelfBlog/notebook/source/_posts/骨架提取/0.5h-1.5h.mp4" type="video/mp4"> </video>
-
-]]></content>
-      <categories>
-        <category>3DReconstruction</category>
-      </categories>
-      <tags>
-        <tag>几何, 三维重建</tag>
       </tags>
   </entry>
   <entry>
@@ -316,6 +291,32 @@
       </categories>
       <tags>
         <tag>几何, 三维重建, 植物</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>骨架提取</title>
+    <url>/2019/07/12/%E9%AA%A8%E6%9E%B6%E6%8F%90%E5%8F%96/</url>
+    <content><![CDATA[<h1 id="骨架提取"><a href="#骨架提取" class="headerlink" title="骨架提取"></a>骨架提取</h1><p>骨架提取的几种核心思路：</p>
+<p>寻找约束中心，收缩领域模型（网格或是点云），体素格+八叉树细致划分</p>
+<p>L1-骨架提取方法：</p>
+<p>生成随机中心（此处用体素格降采样得到初始骨架中心代替）</p>
+<p>正则化处理，邻域检索做文章</p>
+<p>收敛过度是问题，如何改善可以做文章</p>
+<p>现有结果：</p>
+<p><img src="/2019/07/12/骨架提取/image-20201028151235620-1603869854667.png" alt="image-20201028151235620"></p>
+<p><img src="/2019/07/12/骨架提取/image-20201028151248962-1603869854667.png" alt="image-20201028151248962"></p>
+<p><img src="/2019/07/12/骨架提取/image-20201028151258843-1603869854667.png" alt="image-20201028151258843"></p>
+<p><img src="/2019/07/12/骨架提取/image-20201028151306930-1603869854667.png" alt="image-20201028151306930"></p>
+<p><img src="/2019/07/12/骨架提取/image-20201028151322133-1603869854667.png" alt="image-20201028151322133"></p>
+<p><img src="/2019/07/12/骨架提取/image-20201028151330813.png" alt="image-20201028151330813"></p>
+<video id="video" controls preload="none">     <source id="mp4" src="D:/SelfBlog/notebook/source/_posts/骨架提取/0.5h-1.5h.mp4" type="video/mp4"> </video>
+
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>几何, 三维重建</tag>
       </tags>
   </entry>
 </search>
