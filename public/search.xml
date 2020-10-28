@@ -168,15 +168,30 @@
       </categories>
   </entry>
   <entry>
-    <title>琐事2020.10.28</title>
-    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
-    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告，</p>
+    <title>深度学习-三维点云-植物表型</title>
+    <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
+<p>计算方式：</p>
+<p>Step1：pj(px, py, pz)点的法向量nj(nx, ny, nz)投影到法向量ni(nix, niy, niz)和点pi(pix, piy, piz)构成的切平面，pj是pi的领域点：</p>
+<p>切平面表示：nix (x-pix) + niy (y-piy) + niz (z-piz)=0;</p>
+<p>各点法向量投影表示：<img src="/2019/11/12/深度学习-三维点云-植物表型/1573521660696.png" alt="1573521660696"></p>
+<p>其中，I是3×3的单位矩阵；</p>
+<p>注:向量 $\vec{n_i} \bigotimes \vec{n_i}$表示两法向量直积，但是个人认为这里应该是发现了的列向量直积列向量转置，否则无法得到3×3的单位矩阵，最后得到矩阵a应该是:<br>$$<br>a = \left[<br>\matrix{<br>nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; niz·niz \<br>}<br>\right]<br>$$<br>I-a得到矩阵<br>$$<br>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; 1-niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; 1-niz·niz \<br>}<br>\right]<br>$$<br>得到投影向量$\vec{m}$=<br>$$<br>\matrix{<br>(1-nix·nix)·nx+nix·niy·ny+nix·niz·nz,\<br>niy·nix·nx+(1-niy·niy)·ny+niy·niz·nz,\<br>niz·nix·nz+niz·niy·ny+(1-niz·niz)·nz, \<br>}<br>$$<br>然后计算协方差的特征向量得到三个λ，则通过大小排序可得到最大与最小曲率以及曲率方向</p>
+<p><img src="/2019/11/12/深度学习-三维点云-植物表型/1573525802291.png" alt="1573525802291"></p>
+<p>#二、半径表面特征</p>
+<p>得到设定半径内，领域点与计算点的法线夹角与亮点距离，这两个统一作为一个特征；</p>
+<h1 id="三、PFH点特征直方图"><a href="#三、PFH点特征直方图" class="headerlink" title="三、PFH点特征直方图"></a>三、PFH点特征直方图</h1><p>加快的还有FPFH</p>
+<p>#四、SHOT 方向直方图特征</p>
+<p>Signature of histogram of orientations</p>
+<p>构造方法：以查询点p为中心构造半径为r 的球形区域，沿径向、方位、俯仰3个方向划分网格，其中径向2次，方位8次（为简便图中径向只划分了4个），俯仰2次划分网格，将球形区域划分成32个空间区域。在每个空间区域计算计算落入该区域点的法线nv和中心点p法线np之间的夹角余弦cosθ=nv·np，再根据计算的余弦值对落入每一个空间区域的点数进行直方图统计，对计算结果进行归一化，使得对点云密度具有鲁棒性，得到一个352维特征。（原论文：Unique Signatures of Histograms for Local Surface）<br><img src="/2019/11/12/深度学习-三维点云-植物表型/1573528340406.png" alt="1573528340406"></p>
+<p>#五、Spin image旋转图像</p>
+<p><a href="https://blog.csdn.net/renyuanxingxing/article/details/83279328" target="_blank" rel="noopener">https://blog.csdn.net/renyuanxingxing/article/details/83279328</a></p>
 ]]></content>
       <categories>
-        <category>Life</category>
+        <category>3DReconstruction</category>
       </categories>
       <tags>
-        <tag>生活，思考</tag>
+        <tag>三维重建, 植物</tag>
       </tags>
   </entry>
   <entry>
@@ -195,6 +210,18 @@
 <p>​        学习室的空气还是一样的闷热，坐久了就会让我头脑发胀，身边的人还是忙碌着。依旧是等待着毕业，等待着明天。</p>
 <p>​        一片杂文，没有逻辑，只是记录。</p>
 <p>​        嗨，好久没用博客了，忘记怎么上传了，又得折腾一点时间 = =。</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>生活，思考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>琐事2020.10.28</title>
+    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
+    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告，</p>
 ]]></content>
       <categories>
         <category>Life</category>
@@ -236,12 +263,12 @@
 <p>正则化处理，邻域检索做文章</p>
 <p>收敛过度是问题，如何改善可以做文章</p>
 <p>现有结果：</p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151235620.png" alt="image-20201028151235620"></p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151248962.png" alt="image-20201028151248962"></p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151258843.png" alt="image-20201028151258843"></p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151306930.png" alt="image-20201028151306930"></p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151322133.png" alt="image-20201028151322133"></p>
-<video id="video" controls preload="none">     <source id="mp4" src="D:/SelfBlog/notebook/source/_posts/0.5h-1.5h.mp4" type="video/mp4"> </video>
+<p><img src="/2019/07/12/骨架提取/image-20201028151235620-1603869711911.png" alt="image-20201028151235620"></p>
+<p><img src="/2019/07/12/骨架提取/image-20201028151248962-1603869694010.png" alt="image-20201028151248962"></p>
+<p><img src="/2019/07/12/骨架提取/image-20201028151258843-1603869673849.png" alt="image-20201028151258843"></p>
+<p><img src="/2019/07/12/骨架提取/image-20201028151306930-1603869618998.png" alt="image-20201028151306930"></p>
+<p><img src="/2019/07/12/骨架提取/image-20201028151322133-1603869599662.png" alt="image-20201028151322133"></p>
+<video id="video" controls preload="none">     <source id="mp4" src="D:/SelfBlog/notebook/source/_posts/骨架提取/0.5h-1.5h.mp4" type="video/mp4"> </video>
 
 ]]></content>
       <categories>
@@ -249,33 +276,6 @@
       </categories>
       <tags>
         <tag>几何, 三维重建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习-三维点云-植物表型</title>
-    <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
-    <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
-<p>计算方式：</p>
-<p>Step1：pj(px, py, pz)点的法向量nj(nx, ny, nz)投影到法向量ni(nix, niy, niz)和点pi(pix, piy, piz)构成的切平面，pj是pi的领域点：</p>
-<p>切平面表示：nix (x-pix) + niy (y-piy) + niz (z-piz)=0;</p>
-<p>各点法向量投影表示：<img src="/2019/11/12/深度学习-三维点云-植物表型/1573521660696.png" alt="1573521660696"></p>
-<p>其中，I是3×3的单位矩阵；</p>
-<p>注:向量 $\vec{n_i} \bigotimes \vec{n_i}$表示两法向量直积，但是个人认为这里应该是发现了的列向量直积列向量转置，否则无法得到3×3的单位矩阵，最后得到矩阵a应该是:<br>$$<br>a = \left[<br>\matrix{<br>nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; niz·niz \<br>}<br>\right]<br>$$<br>I-a得到矩阵<br>$$<br>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; 1-niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; 1-niz·niz \<br>}<br>\right]<br>$$<br>得到投影向量$\vec{m}$=<br>$$<br>\matrix{<br>(1-nix·nix)·nx+nix·niy·ny+nix·niz·nz,\<br>niy·nix·nx+(1-niy·niy)·ny+niy·niz·nz,\<br>niz·nix·nz+niz·niy·ny+(1-niz·niz)·nz, \<br>}<br>$$<br>然后计算协方差的特征向量得到三个λ，则通过大小排序可得到最大与最小曲率以及曲率方向</p>
-<p><img src="/2019/11/12/深度学习-三维点云-植物表型/1573525802291.png" alt="1573525802291"></p>
-<p>#二、半径表面特征</p>
-<p>得到设定半径内，领域点与计算点的法线夹角与亮点距离，这两个统一作为一个特征；</p>
-<h1 id="三、PFH点特征直方图"><a href="#三、PFH点特征直方图" class="headerlink" title="三、PFH点特征直方图"></a>三、PFH点特征直方图</h1><p>加快的还有FPFH</p>
-<p>#四、SHOT 方向直方图特征</p>
-<p>Signature of histogram of orientations</p>
-<p>构造方法：以查询点p为中心构造半径为r 的球形区域，沿径向、方位、俯仰3个方向划分网格，其中径向2次，方位8次（为简便图中径向只划分了4个），俯仰2次划分网格，将球形区域划分成32个空间区域。在每个空间区域计算计算落入该区域点的法线nv和中心点p法线np之间的夹角余弦cosθ=nv·np，再根据计算的余弦值对落入每一个空间区域的点数进行直方图统计，对计算结果进行归一化，使得对点云密度具有鲁棒性，得到一个352维特征。（原论文：Unique Signatures of Histograms for Local Surface）<br><img src="/2019/11/12/深度学习-三维点云-植物表型/1573528340406.png" alt="1573528340406"></p>
-<p>#五、Spin image旋转图像</p>
-<p><a href="https://blog.csdn.net/renyuanxingxing/article/details/83279328" target="_blank" rel="noopener">https://blog.csdn.net/renyuanxingxing/article/details/83279328</a></p>
-]]></content>
-      <categories>
-        <category>3DReconstruction</category>
-      </categories>
-      <tags>
-        <tag>三维重建, 植物</tag>
       </tags>
   </entry>
   <entry>
