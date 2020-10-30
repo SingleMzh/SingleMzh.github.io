@@ -359,12 +359,50 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2020/10/29/聚类分割/">
+            
+                <span>三维表型--聚类分割</span>
+        </a>
+        <div class="abstract-content">
+            坐标xyz，RGB颜色，HSV空间颜色信息
+使用HSV色彩空间的有点是其每个属性都直接对应于基本色彩概念，这使得它在图像处理中变得简单
+三角植被指数，对于植株点云的分割：$$TGI=-0.5×[0.19(R-G)-0.12(R-B)]$$Hog3D
+kmeans聚类
+特征向量缩放正定矩阵和半正定矩阵
+正定矩阵：给定一个大小为  的实对称矩阵  ，若对于任意长度为  的非零向量  ，有  恒成立，则矩阵  是一个正定矩阵
+半正定矩阵：给定一个大小为  的实对称矩阵  ，若对于任意长度为  的向量  ，有  恒成立，则矩阵  是一个半正定矩阵
+直观解释：
+若给定任意一个正定矩阵  和一个非零...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="几何, 三维重建">几何, 三维重建</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2020/10/28/琐事2020-10-2888/">
             
                 <span>琐事2020.10.28</span>
         </a>
         <div class="abstract-content">
-            今天终于搞定了繁琐的文档工作，开题报告，读书报告，
+            今天终于搞定了繁琐的文档工作，开题报告，读书报告。
+最怕自己的行为给别人的生活带来不好的影响。
 
         </div>
         <div class="abstract-post-meta">
@@ -498,7 +536,7 @@ Step1：pj(px, py, pz)点的法向量nj(nx, ny, nz)投影到法向量ni(nix, niy
     <article class="index-post">
         <a class="abstract-title" href="/2019/07/12/骨架提取/">
             
-                <span>骨架提取</span>
+                <span>三维表型--骨架提取</span>
         </a>
         <div class="abstract-content">
             骨架提取骨架提取的几种核心思路：
@@ -508,6 +546,7 @@ L1-骨架提取方法：
 正则化处理，邻域检索做文章
 收敛过度是问题，如何改善可以做文章
 现有结果：
+
 
 
 
@@ -540,7 +579,7 @@ L1-骨架提取方法：
     <article class="index-post">
         <a class="abstract-title" href="/2019/05/01/fill-Holes/">
             
-                <span>三维重建--网格孔洞识别填补(二)————缺陷孔洞识别</span>
+                <span>三维表型--网格孔洞识别填补(二)————缺陷孔洞识别</span>
         </a>
         <div class="abstract-content">
             缺陷孔洞识别缺陷孔洞与非缺陷孔洞区别-借鉴思路之前孔洞识别将所有封闭换都识别出来，但是存在的问题是，本身是封闭的正常部分也被识别，因此需要通过将两者区分开来；下图中都为所有孔洞，第三幅图中底部的圆孔为非缺陷孔洞，需要剔除。
@@ -576,7 +615,7 @@ L1-骨架提取方法：
     <article class="index-post">
         <a class="abstract-title" href="/2019/04/22/Note1/">
             
-                <span>三维重建--网格孔洞识别填补(一)————孔洞识别</span>
+                <span>三维表型--网格孔洞识别填补(一)————孔洞识别</span>
         </a>
         <div class="abstract-content">
             半边排序-填补孔洞记录如何得到半边的逻辑根据delauney算法，若一条边最多被两个面共用，若一条边只被共用一次那么即为半边，只有半边可以形成孔洞，需要定义边类型，和半边类型
@@ -957,9 +996,22 @@ More...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 9
+        Total : 10
         </div>
         <!-- search  -->
         
@@ -972,6 +1024,11 @@ More...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/29</span><a class="archive-post-title" href="/2020/10/29/聚类分割/">三维表型--聚类分割</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1004,17 +1061,17 @@ More...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href="/2019/07/12/骨架提取/">骨架提取</a>
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href="/2019/07/12/骨架提取/">三维表型--骨架提取</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/01</span><a class="archive-post-title" href="/2019/05/01/fill-Holes/">三维重建--网格孔洞识别填补(二)————缺陷孔洞识别</a>
+            <span class="archive-post-date">05/01</span><a class="archive-post-title" href="/2019/05/01/fill-Holes/">三维表型--网格孔洞识别填补(二)————缺陷孔洞识别</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/Note1/">三维重建--网格孔洞识别填补(一)————孔洞识别</a>
+            <span class="archive-post-date">04/22</span><a class="archive-post-title" href="/2019/04/22/Note1/">三维表型--网格孔洞识别填补(一)————孔洞识别</a>
         </li>
     
     
@@ -1041,19 +1098,19 @@ More...
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="Polygon, Mesh, Processing"><span class="iconfont-archer">&#xe606;</span>Polygon, Mesh, Processing</span>
-    
-        <span class="sidebar-tag-name" data-tags="点云处理"><span class="iconfont-archer">&#xe606;</span>点云处理</span>
-    
         <span class="sidebar-tag-name" data-tags="几何, 三维重建, 植物"><span class="iconfont-archer">&#xe606;</span>几何, 三维重建, 植物</span>
     
         <span class="sidebar-tag-name" data-tags="三维重建, 植物"><span class="iconfont-archer">&#xe606;</span>三维重建, 植物</span>
+    
+        <span class="sidebar-tag-name" data-tags="几何, 三维重建"><span class="iconfont-archer">&#xe606;</span>几何, 三维重建</span>
     
         <span class="sidebar-tag-name" data-tags="生活，思考"><span class="iconfont-archer">&#xe606;</span>生活，思考</span>
     
         <span class="sidebar-tag-name" data-tags="论文写作, 汇报注意"><span class="iconfont-archer">&#xe606;</span>论文写作, 汇报注意</span>
     
-        <span class="sidebar-tag-name" data-tags="几何, 三维重建"><span class="iconfont-archer">&#xe606;</span>几何, 三维重建</span>
+        <span class="sidebar-tag-name" data-tags="点云处理"><span class="iconfont-archer">&#xe606;</span>点云处理</span>
+    
+        <span class="sidebar-tag-name" data-tags="Polygon, Mesh, Processing"><span class="iconfont-archer">&#xe606;</span>Polygon, Mesh, Processing</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1088,10 +1145,6 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="MeshProcess"><span class="iconfont-archer">&#xe60a;</span>MeshProcess</span>
-    
-        <span class="sidebar-category-name" data-categories="HandlePoints"><span class="iconfont-archer">&#xe60a;</span>HandlePoints</span>
-    
         <span class="sidebar-category-name" data-categories="3DReconstruction"><span class="iconfont-archer">&#xe60a;</span>3DReconstruction</span>
     
         <span class="sidebar-category-name" data-categories="Others"><span class="iconfont-archer">&#xe60a;</span>Others</span>
@@ -1099,6 +1152,10 @@ jsonContent:
         <span class="sidebar-category-name" data-categories="Life"><span class="iconfont-archer">&#xe60a;</span>Life</span>
     
         <span class="sidebar-category-name" data-categories="Writing"><span class="iconfont-archer">&#xe60a;</span>Writing</span>
+    
+        <span class="sidebar-category-name" data-categories="HandlePoints"><span class="iconfont-archer">&#xe60a;</span>HandlePoints</span>
+    
+        <span class="sidebar-category-name" data-categories="MeshProcess"><span class="iconfont-archer">&#xe60a;</span>MeshProcess</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

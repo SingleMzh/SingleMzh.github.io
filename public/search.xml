@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>三维重建--网格孔洞识别填补(二)————缺陷孔洞识别</title>
+    <title>三维表型--网格孔洞识别填补(二)————缺陷孔洞识别</title>
     <url>/2019/05/01/fill-Holes/</url>
     <content><![CDATA[<h1 id="缺陷孔洞识别"><a href="#缺陷孔洞识别" class="headerlink" title="缺陷孔洞识别"></a>缺陷孔洞识别</h1><h2 id="缺陷孔洞与非缺陷孔洞区别-借鉴思路"><a href="#缺陷孔洞与非缺陷孔洞区别-借鉴思路" class="headerlink" title="缺陷孔洞与非缺陷孔洞区别-借鉴思路"></a>缺陷孔洞与非缺陷孔洞区别-借鉴思路</h2><p>之前孔洞识别将所有封闭换都识别出来，但是存在的问题是，本身是封闭的正常部分也被识别，因此需要通过将两者区分开来；下图中都为所有孔洞，第三幅图中底部的圆孔为非缺陷孔洞，需要剔除。</p>
 <p><img src="/2019/05/01/fill-Holes/多种孔洞情况.jpg" alt="多种孔洞情况"></p>
@@ -168,6 +168,41 @@
       </tags>
   </entry>
   <entry>
+    <title>三维表型--聚类分割</title>
+    <url>/2020/10/29/%E8%81%9A%E7%B1%BB%E5%88%86%E5%89%B2/</url>
+    <content><![CDATA[<p>坐标xyz，RGB颜色，HSV空间颜色信息</p>
+<p>使用HSV色彩空间的有点是其每个属性都直接对应于基本色彩概念，这使得它在图像处理中变得简单</p>
+<p>三角植被指数，对于植株点云的分割：<br>$$<br>TGI=-0.5×[0.19(R-G)-0.12(R-B)]<br>$$<br>Hog3D</p>
+<p>kmeans聚类</p>
+<h2 id="特征向量缩放"><a href="#特征向量缩放" class="headerlink" title="特征向量缩放"></a>特征向量缩放</h2><p>正定矩阵和半正定矩阵</p>
+<p>正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个正定矩阵</p>
+<p>半正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个半正定矩阵</p>
+<p>直观解释：</p>
+<p>若给定任意一个正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> .)</p>
+<p>若给定任意一个半正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于或等于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> .)</p>
+<p>协方差矩阵的特征向量控制旋转(rotation)，特征值控制尺度(scale)，</p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>几何, 三维重建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>琐事2020.10.28</title>
+    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
+    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告。</p>
+<p>最怕自己的行为给别人的生活带来不好的影响。</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>生活，思考</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>生活-学习-爱情</title>
     <url>/2020/10/27/%E7%94%9F%E6%B4%BB-%E5%AD%A6%E4%B9%A0-%E7%88%B1%E6%83%85/</url>
     <content><![CDATA[<p>本来想把这个个人主页做成技术站，现实是技术突破太慢，久久难以更新。嗨，反正是个人主页，想放什么放什么，也无所谓了。也是想来很久没写东西，近期生活枯燥而波动，个人情绪始终不是特别的高昂，稍稍记录一下。</p>
@@ -183,45 +218,6 @@
 <p>​        学习室的空气还是一样的闷热，坐久了就会让我头脑发胀，身边的人还是忙碌着。依旧是等待着毕业，等待着明天。</p>
 <p>​        一片杂文，没有逻辑，只是记录。</p>
 <p>​        嗨，好久没用博客了，忘记怎么上传了，又得折腾一点时间 = =。</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>生活，思考</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习-三维点云-植物表型</title>
-    <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
-    <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
-<p>计算方式：</p>
-<p>Step1：pj(px, py, pz)点的法向量nj(nx, ny, nz)投影到法向量ni(nix, niy, niz)和点pi(pix, piy, piz)构成的切平面，pj是pi的领域点：</p>
-<p>切平面表示：nix (x-pix) + niy (y-piy) + niz (z-piz)=0;</p>
-<p>各点法向量投影表示：<img src="/2019/11/12/深度学习-三维点云-植物表型/1573521660696.png" alt="1573521660696"></p>
-<p>其中，I是3×3的单位矩阵；</p>
-<p>注:向量 $\vec{n_i} \bigotimes \vec{n_i}$表示两法向量直积，但是个人认为这里应该是发现了的列向量直积列向量转置，否则无法得到3×3的单位矩阵，最后得到矩阵a应该是:<br>$$<br>a = \left[<br>\matrix{<br>nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; niz·niz \<br>}<br>\right]<br>$$<br>I-a得到矩阵<br>$$<br>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; 1-niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; 1-niz·niz \<br>}<br>\right]<br>$$<br>得到投影向量$\vec{m}$=<br>$$<br>\matrix{<br>(1-nix·nix)·nx+nix·niy·ny+nix·niz·nz,\<br>niy·nix·nx+(1-niy·niy)·ny+niy·niz·nz,\<br>niz·nix·nz+niz·niy·ny+(1-niz·niz)·nz, \<br>}<br>$$<br>然后计算协方差的特征向量得到三个λ，则通过大小排序可得到最大与最小曲率以及曲率方向</p>
-<p><img src="/2019/11/12/深度学习-三维点云-植物表型/1573525802291.png" alt="1573525802291"></p>
-<p>#二、半径表面特征</p>
-<p>得到设定半径内，领域点与计算点的法线夹角与亮点距离，这两个统一作为一个特征；</p>
-<h1 id="三、PFH点特征直方图"><a href="#三、PFH点特征直方图" class="headerlink" title="三、PFH点特征直方图"></a>三、PFH点特征直方图</h1><p>加快的还有FPFH</p>
-<p>#四、SHOT 方向直方图特征</p>
-<p>Signature of histogram of orientations</p>
-<p>构造方法：以查询点p为中心构造半径为r 的球形区域，沿径向、方位、俯仰3个方向划分网格，其中径向2次，方位8次（为简便图中径向只划分了4个），俯仰2次划分网格，将球形区域划分成32个空间区域。在每个空间区域计算计算落入该区域点的法线nv和中心点p法线np之间的夹角余弦cosθ=nv·np，再根据计算的余弦值对落入每一个空间区域的点数进行直方图统计，对计算结果进行归一化，使得对点云密度具有鲁棒性，得到一个352维特征。（原论文：Unique Signatures of Histograms for Local Surface）<br><img src="/2019/11/12/深度学习-三维点云-植物表型/1573528340406.png" alt="1573528340406"></p>
-<p>#五、Spin image旋转图像</p>
-<p><a href="https://blog.csdn.net/renyuanxingxing/article/details/83279328" target="_blank" rel="noopener">https://blog.csdn.net/renyuanxingxing/article/details/83279328</a></p>
-]]></content>
-      <categories>
-        <category>3DReconstruction</category>
-      </categories>
-      <tags>
-        <tag>三维重建, 植物</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>琐事2020.10.28</title>
-    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
-    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告，</p>
 ]]></content>
       <categories>
         <category>Life</category>
@@ -254,7 +250,34 @@
       </tags>
   </entry>
   <entry>
-    <title>骨架提取</title>
+    <title>深度学习-三维点云-植物表型</title>
+    <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
+<p>计算方式：</p>
+<p>Step1：pj(px, py, pz)点的法向量nj(nx, ny, nz)投影到法向量ni(nix, niy, niz)和点pi(pix, piy, piz)构成的切平面，pj是pi的领域点：</p>
+<p>切平面表示：nix (x-pix) + niy (y-piy) + niz (z-piz)=0;</p>
+<p>各点法向量投影表示：<img src="/2019/11/12/深度学习-三维点云-植物表型/1573521660696.png" alt="1573521660696"></p>
+<p>其中，I是3×3的单位矩阵；</p>
+<p>注:向量 $\vec{n_i} \bigotimes \vec{n_i}$表示两法向量直积，但是个人认为这里应该是发现了的列向量直积列向量转置，否则无法得到3×3的单位矩阵，最后得到矩阵a应该是:<br>$$<br>a = \left[<br>\matrix{<br>nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; niz·niz \<br>}<br>\right]<br>$$<br>I-a得到矩阵<br>$$<br>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; 1-niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; 1-niz·niz \<br>}<br>\right]<br>$$<br>得到投影向量$\vec{m}$=<br>$$<br>\matrix{<br>(1-nix·nix)·nx+nix·niy·ny+nix·niz·nz,\<br>niy·nix·nx+(1-niy·niy)·ny+niy·niz·nz,\<br>niz·nix·nz+niz·niy·ny+(1-niz·niz)·nz, \<br>}<br>$$<br>然后计算协方差的特征向量得到三个λ，则通过大小排序可得到最大与最小曲率以及曲率方向</p>
+<p><img src="/2019/11/12/深度学习-三维点云-植物表型/1573525802291.png" alt="1573525802291"></p>
+<p>#二、半径表面特征</p>
+<p>得到设定半径内，领域点与计算点的法线夹角与亮点距离，这两个统一作为一个特征；</p>
+<h1 id="三、PFH点特征直方图"><a href="#三、PFH点特征直方图" class="headerlink" title="三、PFH点特征直方图"></a>三、PFH点特征直方图</h1><p>加快的还有FPFH</p>
+<p>#四、SHOT 方向直方图特征</p>
+<p>Signature of histogram of orientations</p>
+<p>构造方法：以查询点p为中心构造半径为r 的球形区域，沿径向、方位、俯仰3个方向划分网格，其中径向2次，方位8次（为简便图中径向只划分了4个），俯仰2次划分网格，将球形区域划分成32个空间区域。在每个空间区域计算计算落入该区域点的法线nv和中心点p法线np之间的夹角余弦cosθ=nv·np，再根据计算的余弦值对落入每一个空间区域的点数进行直方图统计，对计算结果进行归一化，使得对点云密度具有鲁棒性，得到一个352维特征。（原论文：Unique Signatures of Histograms for Local Surface）<br><img src="/2019/11/12/深度学习-三维点云-植物表型/1573528340406.png" alt="1573528340406"></p>
+<p>#五、Spin image旋转图像</p>
+<p><a href="https://blog.csdn.net/renyuanxingxing/article/details/83279328" target="_blank" rel="noopener">https://blog.csdn.net/renyuanxingxing/article/details/83279328</a></p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>三维重建, 植物</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三维表型--骨架提取</title>
     <url>/2019/07/12/%E9%AA%A8%E6%9E%B6%E6%8F%90%E5%8F%96/</url>
     <content><![CDATA[<h1 id="骨架提取"><a href="#骨架提取" class="headerlink" title="骨架提取"></a>骨架提取</h1><p>骨架提取的几种核心思路：</p>
 <p>寻找约束中心，收缩领域模型（网格或是点云），体素格+八叉树细致划分</p>
@@ -268,8 +291,9 @@
 <p><img src="/2019/07/12/骨架提取/image-20201028151258843.png" alt="image-20201028151258843"></p>
 <p><img src="/2019/07/12/骨架提取/image-20201028151306930.png" alt="image-20201028151306930"></p>
 <p><img src="/2019/07/12/骨架提取/image-20201028151322133.png" alt="image-20201028151322133"></p>
-<p><img src="/2019/07/12/骨架提取/image-20201028151330813.png" alt="image-20201028151330813"></p>
-<video src="骨架提取/0.5h-1.5h.mp4"></video>]]></content>
+<video src="骨架提取/0.5h-1.5h.mp4"></video>
+
+]]></content>
       <categories>
         <category>3DReconstruction</category>
       </categories>
@@ -278,7 +302,7 @@
       </tags>
   </entry>
   <entry>
-    <title>三维重建--网格孔洞识别填补(一)————孔洞识别</title>
+    <title>三维表型--网格孔洞识别填补(一)————孔洞识别</title>
     <url>/2019/04/22/Note1/</url>
     <content><![CDATA[<h1 id="半边排序-填补孔洞"><a href="#半边排序-填补孔洞" class="headerlink" title="半边排序-填补孔洞"></a>半边排序-填补孔洞</h1><h3 id="记录如何得到半边的逻辑"><a href="#记录如何得到半边的逻辑" class="headerlink" title="记录如何得到半边的逻辑"></a>记录如何得到半边的逻辑</h3><p>根据delauney算法，若一条边最多被两个面共用，若一条边只被共用一次那么即为半边，只有半边可以形成孔洞，需要定义边类型，和半边类型</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myedge</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> p1id;</span><br><span class="line">	<span class="keyword">int</span> p2id;</span><br><span class="line">	<span class="keyword">int</span> edge_times = <span class="number">0</span>;<span class="comment">// the use times of this edge;</span></span><br><span class="line">	<span class="keyword">int</span> edge_valid = <span class="number">0</span>;<span class="comment">// edge_valid = 0， edge is valid, otherwise  invalid;</span></span><br><span class="line">	myedge();</span><br><span class="line">	myedge(<span class="keyword">int</span> p1, <span class="keyword">int</span> p2)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (p1 == p2) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"Wrong edge!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			edge_valid = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (p1 &gt; p2) &#123;</span><br><span class="line">			p1id = p2;</span><br><span class="line">			p2id = p1;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			p1id = p1;</span><br><span class="line">			p2id = p2;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> == (<span class="keyword">const</span> myedge &amp;x)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> ((<span class="keyword">this</span>-&gt;p1id == x.p1id) &amp;&amp; (<span class="keyword">this</span>-&gt;p2id) == x.p2id)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
