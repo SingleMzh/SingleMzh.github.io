@@ -71,6 +71,33 @@
       </categories>
   </entry>
   <entry>
+    <title>深度学习-三维点云-植物表型</title>
+    <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
+<p>计算方式：</p>
+<p>Step1：pj(px, py, pz)点的法向量nj(nx, ny, nz)投影到法向量ni(nix, niy, niz)和点pi(pix, piy, piz)构成的切平面，pj是pi的领域点：</p>
+<p>切平面表示：nix (x-pix) + niy (y-piy) + niz (z-piz)=0;</p>
+<p>各点法向量投影表示：<img src="/2019/11/12/深度学习-三维点云-植物表型/1573521660696.png" alt="1573521660696"></p>
+<p>其中，I是3×3的单位矩阵；</p>
+<p>注:向量 $\vec{n_i} \bigotimes \vec{n_i}$表示两法向量直积，但是个人认为这里应该是发现了的列向量直积列向量转置，否则无法得到3×3的单位矩阵，最后得到矩阵a应该是:<br>$$<br>a = \left[<br>\matrix{<br>nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; niz·niz \<br>}<br>\right]<br>$$<br>I-a得到矩阵<br>$$<br>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; 1-niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; 1-niz·niz \<br>}<br>\right]<br>$$<br>得到投影向量$\vec{m}$=<br>$$<br>\matrix{<br>(1-nix·nix)·nx+nix·niy·ny+nix·niz·nz,\<br>niy·nix·nx+(1-niy·niy)·ny+niy·niz·nz,\<br>niz·nix·nz+niz·niy·ny+(1-niz·niz)·nz, \<br>}<br>$$<br>然后计算协方差的特征向量得到三个λ，则通过大小排序可得到最大与最小曲率以及曲率方向</p>
+<p><img src="/2019/11/12/深度学习-三维点云-植物表型/1573525802291.png" alt="1573525802291"></p>
+<p>#二、半径表面特征</p>
+<p>得到设定半径内，领域点与计算点的法线夹角与亮点距离，这两个统一作为一个特征；</p>
+<h1 id="三、PFH点特征直方图"><a href="#三、PFH点特征直方图" class="headerlink" title="三、PFH点特征直方图"></a>三、PFH点特征直方图</h1><p>加快的还有FPFH</p>
+<p>#四、SHOT 方向直方图特征</p>
+<p>Signature of histogram of orientations</p>
+<p>构造方法：以查询点p为中心构造半径为r 的球形区域，沿径向、方位、俯仰3个方向划分网格，其中径向2次，方位8次（为简便图中径向只划分了4个），俯仰2次划分网格，将球形区域划分成32个空间区域。在每个空间区域计算计算落入该区域点的法线nv和中心点p法线np之间的夹角余弦cosθ=nv·np，再根据计算的余弦值对落入每一个空间区域的点数进行直方图统计，对计算结果进行归一化，使得对点云密度具有鲁棒性，得到一个352维特征。（原论文：Unique Signatures of Histograms for Local Surface）<br><img src="/2019/11/12/深度学习-三维点云-植物表型/1573528340406.png" alt="1573528340406"></p>
+<p>#五、Spin image旋转图像</p>
+<p><a href="https://blog.csdn.net/renyuanxingxing/article/details/83279328" target="_blank" rel="noopener">https://blog.csdn.net/renyuanxingxing/article/details/83279328</a></p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>三维重建, 植物</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>农业三维重建应用框架</title>
     <url>/2019/07/22/%E5%86%9C%E4%B8%9A%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/</url>
     <content><![CDATA[<h1 id="农业领域三维技术应用"><a href="#农业领域三维技术应用" class="headerlink" title="农业领域三维技术应用"></a>农业领域三维技术应用</h1><h2 id="一、区分"><a href="#一、区分" class="headerlink" title="一、区分"></a>一、区分</h2><h3 id="1、应用场景区分："><a href="#1、应用场景区分：" class="headerlink" title="1、应用场景区分："></a>1、应用场景区分：</h3><p>①农业机械化作业应用：</p>
@@ -168,28 +195,6 @@
       </tags>
   </entry>
   <entry>
-    <title>三维表型--聚类分割</title>
-    <url>/2020/10/29/%E8%81%9A%E7%B1%BB%E5%88%86%E5%89%B2/</url>
-    <content><![CDATA[<p>坐标xyz，RGB颜色，HSV空间颜色信息</p>
-<p>使用HSV色彩空间的有点是其每个属性都直接对应于基本色彩概念，这使得它在图像处理中变得简单</p>
-<p>三角植被指数，对于植株点云的分割：<br>$$<br>TGI=-0.5×[0.19(R-G)-0.12(R-B)]<br>$$<br>Hog3D</p>
-<p>kmeans聚类</p>
-<h2 id="特征向量缩放"><a href="#特征向量缩放" class="headerlink" title="特征向量缩放"></a>特征向量缩放</h2><p>正定矩阵和半正定矩阵</p>
-<p>正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个正定矩阵</p>
-<p>半正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个半正定矩阵</p>
-<p>直观解释：</p>
-<p>若给定任意一个正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> .)</p>
-<p>若给定任意一个半正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于或等于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> .)</p>
-<p>协方差矩阵的特征向量控制旋转(rotation)，特征值控制尺度(scale)，</p>
-]]></content>
-      <categories>
-        <category>3DReconstruction</category>
-      </categories>
-      <tags>
-        <tag>几何, 三维重建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>琐事2020.10.28</title>
     <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
     <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告。</p>
@@ -227,6 +232,28 @@
       </tags>
   </entry>
   <entry>
+    <title>三维表型--聚类分割</title>
+    <url>/2020/10/29/%E8%81%9A%E7%B1%BB%E5%88%86%E5%89%B2/</url>
+    <content><![CDATA[<p>坐标xyz，RGB颜色，HSV空间颜色信息</p>
+<p>使用HSV色彩空间的有点是其每个属性都直接对应于基本色彩概念，这使得它在图像处理中变得简单</p>
+<p>三角植被指数，对于植株点云的分割：<br>$$<br>TGI=-0.5×[0.19(R-G)-0.12(R-B)]<br>$$<br>Hog3D</p>
+<p>kmeans聚类</p>
+<h2 id="特征向量缩放"><a href="#特征向量缩放" class="headerlink" title="特征向量缩放"></a>特征向量缩放</h2><p>正定矩阵和半正定矩阵</p>
+<p>正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个正定矩阵</p>
+<p>半正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个半正定矩阵</p>
+<p>直观解释：</p>
+<p>若给定任意一个正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> .)</p>
+<p>若给定任意一个半正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于或等于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> .)</p>
+<p>协方差矩阵的特征向量控制旋转(rotation)，特征值控制尺度(scale)，</p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>几何, 三维重建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>论文与汇报注意点</title>
     <url>/2018/12/12/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%B1%87%E6%8A%A5%E6%B3%A8%E6%84%8F%E7%82%B9/</url>
     <content><![CDATA[<h1 id="英文展示注意"><a href="#英文展示注意" class="headerlink" title="英文展示注意"></a>英文展示注意</h1><p>1、图的效果讲下就够，不一定要详细描述图的细节</p>
@@ -250,33 +277,6 @@
       </tags>
   </entry>
   <entry>
-    <title>深度学习-三维点云-植物表型</title>
-    <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
-    <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
-<p>计算方式：</p>
-<p>Step1：pj(px, py, pz)点的法向量nj(nx, ny, nz)投影到法向量ni(nix, niy, niz)和点pi(pix, piy, piz)构成的切平面，pj是pi的领域点：</p>
-<p>切平面表示：nix (x-pix) + niy (y-piy) + niz (z-piz)=0;</p>
-<p>各点法向量投影表示：<img src="/2019/11/12/深度学习-三维点云-植物表型/1573521660696.png" alt="1573521660696"></p>
-<p>其中，I是3×3的单位矩阵；</p>
-<p>注:向量 $\vec{n_i} \bigotimes \vec{n_i}$表示两法向量直积，但是个人认为这里应该是发现了的列向量直积列向量转置，否则无法得到3×3的单位矩阵，最后得到矩阵a应该是:<br>$$<br>a = \left[<br>\matrix{<br>nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; niz·niz \<br>}<br>\right]<br>$$<br>I-a得到矩阵<br>$$<br>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &amp; nix·niz \<br>niy·nix &amp; 1-niy·niy &amp; niy·niz \<br>niz·nix &amp; niz·niy &amp; 1-niz·niz \<br>}<br>\right]<br>$$<br>得到投影向量$\vec{m}$=<br>$$<br>\matrix{<br>(1-nix·nix)·nx+nix·niy·ny+nix·niz·nz,\<br>niy·nix·nx+(1-niy·niy)·ny+niy·niz·nz,\<br>niz·nix·nz+niz·niy·ny+(1-niz·niz)·nz, \<br>}<br>$$<br>然后计算协方差的特征向量得到三个λ，则通过大小排序可得到最大与最小曲率以及曲率方向</p>
-<p><img src="/2019/11/12/深度学习-三维点云-植物表型/1573525802291.png" alt="1573525802291"></p>
-<p>#二、半径表面特征</p>
-<p>得到设定半径内，领域点与计算点的法线夹角与亮点距离，这两个统一作为一个特征；</p>
-<h1 id="三、PFH点特征直方图"><a href="#三、PFH点特征直方图" class="headerlink" title="三、PFH点特征直方图"></a>三、PFH点特征直方图</h1><p>加快的还有FPFH</p>
-<p>#四、SHOT 方向直方图特征</p>
-<p>Signature of histogram of orientations</p>
-<p>构造方法：以查询点p为中心构造半径为r 的球形区域，沿径向、方位、俯仰3个方向划分网格，其中径向2次，方位8次（为简便图中径向只划分了4个），俯仰2次划分网格，将球形区域划分成32个空间区域。在每个空间区域计算计算落入该区域点的法线nv和中心点p法线np之间的夹角余弦cosθ=nv·np，再根据计算的余弦值对落入每一个空间区域的点数进行直方图统计，对计算结果进行归一化，使得对点云密度具有鲁棒性，得到一个352维特征。（原论文：Unique Signatures of Histograms for Local Surface）<br><img src="/2019/11/12/深度学习-三维点云-植物表型/1573528340406.png" alt="1573528340406"></p>
-<p>#五、Spin image旋转图像</p>
-<p><a href="https://blog.csdn.net/renyuanxingxing/article/details/83279328" target="_blank" rel="noopener">https://blog.csdn.net/renyuanxingxing/article/details/83279328</a></p>
-]]></content>
-      <categories>
-        <category>3DReconstruction</category>
-      </categories>
-      <tags>
-        <tag>三维重建, 植物</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>三维表型--骨架提取</title>
     <url>/2019/07/12/%E9%AA%A8%E6%9E%B6%E6%8F%90%E5%8F%96/</url>
     <content><![CDATA[<h1 id="骨架提取"><a href="#骨架提取" class="headerlink" title="骨架提取"></a>骨架提取</h1><p>骨架提取的几种核心思路：</p>
@@ -293,6 +293,8 @@
 <p><img src="/2019/07/12/骨架提取/image-20201028151322133.png" alt="image-20201028151322133"></p>
 <video src="骨架提取/0.5h-1.5h.mp4"></video>
 
+<p><img src="/2019/07/12/骨架提取/image-20201101090333626.png" alt="image-20201101090333626"></p>
+<p>最后一张是官方的和我的，黑色是我的骨架，红色的官方骨架，明显我的更好</p>
 ]]></content>
       <categories>
         <category>3DReconstruction</category>
