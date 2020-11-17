@@ -424,8 +424,7 @@ height:50vh;
 <p>思路：依次获取孔洞个点的法向量，并比较向量两点法向量的角度差，即每条边两个顶点的角度差，计算平均角度差与标准角度偏差，小于设定阈值为缺陷孔洞，否则不为缺陷孔洞</p>
 <p>伪码：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;vertex&gt;&gt;holes_out;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;holes.size();i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt;angleall;</span><br><span class="line">    <span class="keyword">double</span> sumangle=getangle(holes.at(i).at(<span class="number">0</span>),holes.at(i).at(holes.size()<span class="number">-1</span>));</span><br><span class="line">    angleall.push_back(sumangle);</span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;holes.at(i).size()<span class="number">-1</span>;j++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">double</span> tempangle=getangle(holes.at(j).at(<span class="number">0</span>),holes.at(i).at(j+<span class="number">1</span>));</span><br><span class="line">        sumagle += tempangle;</span><br><span class="line">        angleall.push_back(tempangle);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">double</span> aveangle=sumangle/holes.at(i).siez();</span><br><span class="line">    <span class="keyword">double</span> Nrmse2=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;angleall.size();k++)</span><br><span class="line">    &#123;</span><br><span class="line">        Nrmse2+=(angleall.at(k)-aveangle)*(angleall.at(k)-aveangle);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">double</span> rmse=<span class="built_in">sqrt</span>(Nrmse2*<span class="number">1.0</span>/angleall.size());</span><br><span class="line">    <span class="keyword">if</span>(rmse&lt;threshold1 &amp;&amp; aveangle &lt;threshold2)</span><br><span class="line">    &#123;</span><br><span class="line">        holes_out.pushback(holes.at(i));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>##结果</p>
-<p>设定平均角度阈值为0.4（22.9°），rmse阈值为0.5</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>设定平均角度阈值为0.4（22.9°），rmse阈值为0.5</p>
 <p><img src="/2019/05/01/fill-Holes/ave0.4-rmse0.5.png" alt="ave0.4-rmse0.5"></p>
 <p>设定平均角度阈值为0.2（11.45°），rmse阈值为0.5</p>
 <p><img src="/2019/05/01/fill-Holes/ave0.2-rmse0.5_2.png" alt="ave0.2-rmse0.5_2"></p>
@@ -715,9 +714,15 @@ height:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 10
+        Total : 12
         </div>
         <!-- search  -->
         
@@ -730,6 +735,16 @@ height:50vh;
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href="/2020/11/17/2020年7个月股市心得/">2020年7个月股市心得</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href="/2020/11/12/Skeletion-paper-notes/">Skeletion paper notes</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -808,6 +823,8 @@ height:50vh;
     
         <span class="sidebar-tag-name" data-tags="点云处理"><span class="iconfont-archer">&#xe606;</span>点云处理</span>
     
+        <span class="sidebar-tag-name" data-tags="炒股心得"><span class="iconfont-archer">&#xe606;</span>炒股心得</span>
+    
         <span class="sidebar-tag-name" data-tags="几何, 三维重建, 植物"><span class="iconfont-archer">&#xe606;</span>几何, 三维重建, 植物</span>
     
         <span class="sidebar-tag-name" data-tags="三维重建, 植物"><span class="iconfont-archer">&#xe606;</span>三维重建, 植物</span>
@@ -854,6 +871,8 @@ jsonContent:
         <span class="sidebar-category-name" data-categories="MeshProcess"><span class="iconfont-archer">&#xe60a;</span>MeshProcess</span>
     
         <span class="sidebar-category-name" data-categories="HandlePoints"><span class="iconfont-archer">&#xe60a;</span>HandlePoints</span>
+    
+        <span class="sidebar-category-name" data-categories="股市"><span class="iconfont-archer">&#xe60a;</span>股市</span>
     
         <span class="sidebar-category-name" data-categories="3DReconstruction"><span class="iconfont-archer">&#xe60a;</span>3DReconstruction</span>
     

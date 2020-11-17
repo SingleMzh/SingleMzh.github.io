@@ -403,11 +403,13 @@ height:50vh;
     <article class="article-entry">
         <p>坐标xyz，RGB颜色，HSV空间颜色信息</p>
 <p>使用HSV色彩空间的有点是其每个属性都直接对应于基本色彩概念，这使得它在图像处理中变得简单</p>
-<p>三角植被指数，对于植株点云的分割：<br>$$<br>TGI=-0.5×[0.19(R-G)-0.12(R-B)]<br>$$<br>Hog3D</p>
+<p>三角植被指数，对于植株点云的分割：</p>
+<script type="math/tex; mode=display">
+TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
 <p>kmeans聚类</p>
 <h2 id="特征向量缩放"><a href="#特征向量缩放" class="headerlink" title="特征向量缩放"></a>特征向量缩放</h2><p>正定矩阵和半正定矩阵</p>
 <p>正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个正定矩阵</p>
-<p>半正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个半正定矩阵</p>
+<p>半正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]">，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个半正定矩阵</p>
 <p>直观解释：</p>
 <p>若给定任意一个正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> .)</p>
 <p>若给定任意一个半正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于或等于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> .)</p>
@@ -420,13 +422,18 @@ height:50vh;
             <p>原文作者：<a href="https://singlemzh.github.io">MZH</a>
             </p><p>原文链接：<a href="https://singlemzh.github.io/2020/10/29/聚类分割/">https://singlemzh.github.io/2020/10/29/聚类分割/</a>
             </p><p>发表日期：<a href="https://singlemzh.github.io/2020/10/29/聚类分割/">October 29th 2020, 9:11:52 am</a>
-            </p><p>更新日期：<a href="https://singlemzh.github.io/2020/10/29/聚类分割/">October 30th 2020, 12:12:54 pm</a>
+            </p><p>更新日期：<a href="https://singlemzh.github.io/2020/10/29/聚类分割/">November 1st 2020, 9:08:14 am</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2020/11/12/Skeletion-paper-notes/" title="Skeletion paper notes">
+                    <div class="nextTitle">Skeletion paper notes</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -679,9 +686,15 @@ height:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 10
+        Total : 12
         </div>
         <!-- search  -->
         
@@ -694,6 +707,16 @@ height:50vh;
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href="/2020/11/17/2020年7个月股市心得/">2020年7个月股市心得</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href="/2020/11/12/Skeletion-paper-notes/">Skeletion paper notes</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -772,6 +795,8 @@ height:50vh;
     
         <span class="sidebar-tag-name" data-tags="点云处理"><span class="iconfont-archer">&#xe606;</span>点云处理</span>
     
+        <span class="sidebar-tag-name" data-tags="炒股心得"><span class="iconfont-archer">&#xe606;</span>炒股心得</span>
+    
         <span class="sidebar-tag-name" data-tags="几何, 三维重建, 植物"><span class="iconfont-archer">&#xe606;</span>几何, 三维重建, 植物</span>
     
         <span class="sidebar-tag-name" data-tags="三维重建, 植物"><span class="iconfont-archer">&#xe606;</span>三维重建, 植物</span>
@@ -818,6 +843,8 @@ jsonContent:
         <span class="sidebar-category-name" data-categories="MeshProcess"><span class="iconfont-archer">&#xe60a;</span>MeshProcess</span>
     
         <span class="sidebar-category-name" data-categories="HandlePoints"><span class="iconfont-archer">&#xe60a;</span>HandlePoints</span>
+    
+        <span class="sidebar-category-name" data-categories="股市"><span class="iconfont-archer">&#xe60a;</span>股市</span>
     
         <span class="sidebar-category-name" data-categories="3DReconstruction"><span class="iconfont-archer">&#xe60a;</span>3DReconstruction</span>
     
