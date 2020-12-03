@@ -13,6 +13,10 @@
 <p>​        其次，及时止损是非常重要的手段，在亏损的股出现亏损的苗头的时候，我其实是有足够的时间抛售减持减低损失的，但是因为个人的盲目判断以及详细股价能回涨的贪婪心理，导致止损不及时，造成重大亏损。股市赚钱可以，但是还是要设置心理的收益上限，赌徒心理最终也只会带来亏损。</p>
 <p>​        再者，平和的心态非常重要，在出现较大亏损的时候，我的心态就容易变得焦躁和慌乱，后续的买股就会变得盲目，缺少自己的主观判断，导致盲目跟风追高。还一方面也是因为时间经历有限，没有太多精力去研究股票变化。但是其实即便如此每天花在股市上的时间也不少。因此既然都这样了，不如花时间研究下个股的业绩和相关局势形式。高买低抛也是后续操作出现频繁亏损的一个重要原因，因此保持正常良好的心态非常重要。炒股目前阶段还是学习研究，也是锻炼心态的好时候。</p>
 <p>​        近期小结如此，后续考虑写一下更细节的个股买卖思路。</p>
+<p>流水：至11.19为止投入资金，其中9600是15年股本：</p>
+<p>20年股本：4000+2000+3000 +1500+3500 +2000+3000 +1600+3000+4000=9000+5000+5000+4600+4000=9000+10000+8600=27600+2600+4000=34200</p>
+<p>总股本：9600+34200=43600</p>
+<p>20年初始股本5000+34200=39200</p>
 ]]></content>
       <categories>
         <category>股市</category>
@@ -24,17 +28,26 @@
   <entry>
     <title>Skeletion paper notes</title>
     <url>/2020/11/12/Skeletion-paper-notes/</url>
-    <content><![CDATA[<h1 id="Skeletonization-of-Plant-Point-Cloud-Data-Using-Stochastic-Optimization-Framework"><a href="#Skeletonization-of-Plant-Point-Cloud-Data-Using-Stochastic-Optimization-Framework" class="headerlink" title="Skeletonization of Plant Point Cloud Data Using Stochastic Optimization Framework"></a>Skeletonization of Plant Point Cloud Data Using Stochastic Optimization Framework</h1><p>问题：</p>
+    <content><![CDATA[<h1 id="Skeletonization-of-Plant-Point-Cloud-Data-Using-Stochastic-Optimization-Framework（有待进一步研究）"><a href="#Skeletonization-of-Plant-Point-Cloud-Data-Using-Stochastic-Optimization-Framework（有待进一步研究）" class="headerlink" title="Skeletonization of Plant Point Cloud Data Using Stochastic Optimization Framework（有待进一步研究）"></a>Skeletonization of Plant Point Cloud Data Using Stochastic Optimization Framework（有待进一步研究）</h1><p>问题：</p>
 <p>Problems with the existing approaches on skeletonizing plant point cloud data. Original point cloud is shown as black point cloud and the skeleton points are shown as red points. (Left) The problem of zigzag structure, where the skeleton does not follow the centerline of the stem and tends to deviate toward the branching point (Xu et al., 2007) (only the main stem skeleton is shown in the figure). (Middle) The problem of biologically irrelevant skeleton points which falls beyond the boundary of the input data (shown at the top part), and inability to capture the geometric details for some branches (Delagrange et al., 2014; Ziamtsov and Navlakha, 2019). (Right) Overlooking tiny geometrical structures (Xu et al., 2007).</p>
 <p>现有的关于植物点云数据框架化的方法存在问题： 原始点云显示为黑点云，骨架点显示为红点。 （左）锯齿形结构问题，即骨架不跟随茎的中心线，而倾向于向分支点偏移（Xu等，2007）（图中仅显示了主茎骨架）。 （中）生物学上不相关的骨架点超出输入数据的边界（显示在顶部）的问题，以及无法捕获某些分支的几何细节的问题（Delagrange等人，2014年; Ziamtsov和Navlakha，2019年） ）。 （右）俯瞰微小的几何结构（Xu等，2007）</p>
 <p><img src="/2020/11/12/Skeletion-paper-notes/fpls-11-00773-g001.jpg" alt="img"></p>
+<p>抛出三个问题：</p>
+<p>①Z字型结构，需要解决的关键问题</p>
+<p>②无效不不准确的骨架点计算：骨架点在数据外部；数量不足区域无法表示分支的实际情况，完全分支无法用骨架点表示，解决方法是用插值或点近似策略生成更多骨架点，</p>
+<p>③细小分支被视为噪声</p>
+<p>初始化骨架，然后参数化表示骨架，用图表示，由于节点突变，所以考虑节点曲率求导为0？随机建模方法有点难理解，需要时间</p>
 <h1 id="An-Accurate-Skeleton-Extraction-Approach-From-3D-Point-Clouds-of-Maize-Plants"><a href="#An-Accurate-Skeleton-Extraction-Approach-From-3D-Point-Clouds-of-Maize-Plants" class="headerlink" title="An Accurate Skeleton Extraction Approach From 3D Point Clouds of Maize Plants"></a>An Accurate Skeleton Extraction Approach From 3D Point Clouds of Maize Plants</h1><p>Skeleton extraction from 3D plant point cloud data is an essential prior for myriads of phenotyping studies. Although skeleton extraction from 3D shapes have been studied extensively in the computer vision and graphics literature, handling the case of plants is still an open problem.</p>
 <p>Drawbacks of the existing approaches include the zigzag structure of the skeleton, nonuniform density of skeleton points, lack of points in the areas having complex geometry structure, and most importantly the lack of biological relevance.</p>
 <p>自适应采样：目的：确定关键点，保持分支的几何特性，在枝条的交点采用不同的球形半径采样技术</p>
 <p>确定是否是交叉点，引入点的方向堵来描述线性趋势，就是协方差确定方向度量衡，跟L1这块做的思路一致</p>
 <p>方法效果一般可借鉴思路：骨架点连接部分，如何剔除非同一骨架点连接的情况。以及修正骨架。</p>
 <p>①该文章思路是认为局部骨架点能够成近似平面，根据点距离拟合平面的距离（并非简单的欧氏距离，是带有区里权重的一个参数）来判断点是否是在某个骨架分支上。（平面是一个借鉴思路，实际上我也这样做，但是问题是，很多时候并不是平面，因此得看具体数据做出判断）</p>
-<p>②在骨架修正方面，该文章思路</p>
+<p>②在骨架修正方面，该文章思路找垂直于某个骨架点切方向的平面然后，找到该切平面的聚类点集进行重新拟合骨架点。</p>
+<h1 id="Knowledge-and-Heuristic-Based-Modelingof-Laser-Scanned-Trees"><a href="#Knowledge-and-Heuristic-Based-Modelingof-Laser-Scanned-Trees" class="headerlink" title="Knowledge and Heuristic-Based Modelingof Laser-Scanned Trees"></a>Knowledge and Heuristic-Based Modelingof Laser-Scanned Trees</h1><p>需要先验经验（手动选择模型根节点，或者模型严格满足平行xyz坐标系，选择最低点）</p>
+<h1 id="TopoAngler-Interactive-Topology-based-Extraction-of-Fishes"><a href="#TopoAngler-Interactive-Topology-based-Extraction-of-Fishes" class="headerlink" title="TopoAngler: Interactive Topology-based Extraction of Fishes"></a>TopoAngler: Interactive Topology-based Extraction of Fishes</h1><p>对CT鱼群的扫描进行自动化的分割识别</p>
+<p>instead of forcing the user to detect fishes in the dataset and manually construct bounding boxes, our system makes use of a hierarchical segmentation to find features of interest in the dataset</p>
+<p>通过分级分割获取数据特征</p>
 <h1 id="Towards-“smart-canopy”-sorghum-discovery-of-the-genetic-control-of-leaf-angle-across-layers"><a href="#Towards-“smart-canopy”-sorghum-discovery-of-the-genetic-control-of-leaf-angle-across-layers" class="headerlink" title="Towards “smart canopy” sorghum: discovery of the genetic control of leaf angle across layers"></a>Towards “smart canopy” sorghum: discovery of the genetic control of leaf angle across layers</h1><p>顶部直立，底部平铺，最大程度提高光的拦截和转换效率，增产</p>
 <p>角度分布室内室外与基因型相反？（室内外不一致？）</p>
 ]]></content>
@@ -214,43 +227,6 @@
       </tags>
   </entry>
   <entry>
-    <title>琐事2020.10.28</title>
-    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
-    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告。</p>
-<p>最怕自己的行为给别人的生活带来不好的影响。</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>生活，思考</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>生活-学习-爱情</title>
-    <url>/2020/10/27/%E7%94%9F%E6%B4%BB-%E5%AD%A6%E4%B9%A0-%E7%88%B1%E6%83%85/</url>
-    <content><![CDATA[<p>本来想把这个个人主页做成技术站，现实是技术突破太慢，久久难以更新。嗨，反正是个人主页，想放什么放什么，也无所谓了。也是想来很久没写东西，近期生活枯燥而波动，个人情绪始终不是特别的高昂，稍稍记录一下。</p>
-<p><strong>有关学习</strong></p>
-<p>​        学习是我唯一坚持这么多年的事，但是实际上读研之后，更多的是在赶工赶进度，做导师的项目，完成导师的任务，一年下来真正静下心来好好学习的时间寥寥无几。也不全怪导师，从小到大一直在区域拔尖的学校学习，多多少少有点自傲。浮躁，焦虑，伴随我3年半的情绪始终是影响个人工作状态的两大因素，挥之不去。所幸，现实打脸的很快，我也不过是平平常常的普通人，膨胀的状态没有维持多久变气馁了下来，自信心挫败的感觉并不好受。每个人对生活的都有本质的态度，表面上的乐观并无法改变骨子里的悲观。所幸我认为人要死的有价值，所以我怕死，至少不会干出自杀这种事。这种不负责，不仁义。也所幸认识了子毅师兄。目前，还是慢慢找状态，沉静下来心来去学。社会很浮躁，适应社会却很违背本心，不适应社会又难以生存。也只能学习了。</p>
-<p><strong>有关生活</strong></p>
-<p>​        今年是特殊的一年，疫情毕业，再次感受到了别离。可能是上了年纪，以前是对到一个新的地方充满期待，现在则是希望一群朋友就呆在一个地方温馨和谐。但是生活别离才是常态。嗨，毕业的同学们，有机会再聚。小两级的师弟师妹们充满了活力，是青春的力量，偶尔跟他们一起活动感觉到了年轻的感觉。明明只大了2级，大概两三岁的样子，心态感觉就和他们差了好多。可能我适合安居一隅吧。很让我感动的是王唯师姐，让我感受到亲姐的感觉，很贴心很细心，少有的感动。生活还是这样波澜不惊，以前挺喜欢杭州的，但可能是因为这群朋友，现在朋友都陆陆续续开始他们新的人生了。我对杭州腻了。</p>
-<p><strong>有关爱情</strong></p>
-<p>​        这几天，堂哥给我介绍了一个在杭州工作的女生，可能是自信心挫败带来的轻微社恐，其实是在堂哥第二次跟我说的时候我才去加了那个女生。第一次经历网络相亲，很突然没准备也跃跃欲试。这可能也算是尝试新的东西？加了女生之后聊了两次，感觉女生很温柔，讲话令人感到舒服，自律优秀，也是文艺附加漂亮。第一印象很好，好到让我妄自菲薄。尽管读到博士，社会不少人对博士还是有一定认可，但是自己心里有数，自己只是普通人，学历并不代表一切。找一个能读懂自己的人，是妹子的想法，也同样是我的想法。生活那么匆忙，人来人往中都是匆匆掠过，可能掀起短暂的波澜，但并没有什么实质的影响。没有长久的相处就无法有深入的了解。一直对这事很谨慎，尽管口嗨想找妹子，但是确实是想慢慢的深入的去了解一个人。可惜生活并不是理想，身边的人越来越多结婚生子的，份子钱，晒娃，都在提醒我这个年纪了你怎么还是单身。所以焦急而又淡定，很矛盾的心理，我不想急急燥燥的定下人生后半旅程的伴侣，但是又无奈始终单身的现状。但是，真正碰到对的人，是快是慢？</p>
-<p>​        这是第一次网络相亲，不确定是否能和这个女生慢慢了解下去，也不确定以后是否还会经历这样的相亲，但是毕竟是第一次经历，记录一下。</p>
-<p><strong>关于股票</strong></p>
-<p>​        半年时间，收益从25%跌倒10%不到，贪婪是难以消除的劣根性，把期待寄托于市场以及他人的建议，不如自己研究制定良好的买卖策略，亏本不急躁，盈利不贪婪，在股市里保持良好的操盘心态。</p>
-<p>​        学习室的空气还是一样的闷热，坐久了就会让我头脑发胀，身边的人还是忙碌着。依旧是等待着毕业，等待着明天。</p>
-<p>​        一片杂文，没有逻辑，只是记录。</p>
-<p>​        嗨，好久没用博客了，忘记怎么上传了，又得折腾一点时间 = =。</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>生活，思考</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深度学习-三维点云-植物表型</title>
     <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
@@ -286,6 +262,89 @@ I-a得到矩阵</script><p>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &
       <tags>
         <tag>三维重建, 植物</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>生活-学习-爱情</title>
+    <url>/2020/10/27/%E7%94%9F%E6%B4%BB-%E5%AD%A6%E4%B9%A0-%E7%88%B1%E6%83%85/</url>
+    <content><![CDATA[<p>本来想把这个个人主页做成技术站，现实是技术突破太慢，久久难以更新。嗨，反正是个人主页，想放什么放什么，也无所谓了。也是想来很久没写东西，近期生活枯燥而波动，个人情绪始终不是特别的高昂，稍稍记录一下。</p>
+<p><strong>有关学习</strong></p>
+<p>​        学习是我唯一坚持这么多年的事，但是实际上读研之后，更多的是在赶工赶进度，做导师的项目，完成导师的任务，一年下来真正静下心来好好学习的时间寥寥无几。也不全怪导师，从小到大一直在区域拔尖的学校学习，多多少少有点自傲。浮躁，焦虑，伴随我3年半的情绪始终是影响个人工作状态的两大因素，挥之不去。所幸，现实打脸的很快，我也不过是平平常常的普通人，膨胀的状态没有维持多久变气馁了下来，自信心挫败的感觉并不好受。每个人对生活的都有本质的态度，表面上的乐观并无法改变骨子里的悲观。所幸我认为人要死的有价值，所以我怕死，至少不会干出自杀这种事。这种不负责，不仁义。也所幸认识了子毅师兄。目前，还是慢慢找状态，沉静下来心来去学。社会很浮躁，适应社会却很违背本心，不适应社会又难以生存。也只能学习了。</p>
+<p><strong>有关生活</strong></p>
+<p>​        今年是特殊的一年，疫情毕业，再次感受到了别离。可能是上了年纪，以前是对到一个新的地方充满期待，现在则是希望一群朋友就呆在一个地方温馨和谐。但是生活别离才是常态。嗨，毕业的同学们，有机会再聚。小两级的师弟师妹们充满了活力，是青春的力量，偶尔跟他们一起活动感觉到了年轻的感觉。明明只大了2级，大概两三岁的样子，心态感觉就和他们差了好多。可能我适合安居一隅吧。很让我感动的是王唯师姐，让我感受到亲姐的感觉，很贴心很细心，少有的感动。生活还是这样波澜不惊，以前挺喜欢杭州的，但可能是因为这群朋友，现在朋友都陆陆续续开始他们新的人生了。我对杭州腻了。</p>
+<p><strong>有关爱情</strong></p>
+<p>​        这几天，堂哥给我介绍了一个在杭州工作的女生，可能是自信心挫败带来的轻微社恐，其实是在堂哥第二次跟我说的时候我才去加了那个女生。第一次经历网络相亲，很突然没准备也跃跃欲试。这可能也算是尝试新的东西？加了女生之后聊了两次，感觉女生很温柔，讲话令人感到舒服，自律优秀，也是文艺附加漂亮。第一印象很好，好到让我妄自菲薄。尽管读到博士，社会不少人对博士还是有一定认可，但是自己心里有数，自己只是普通人，学历并不代表一切。找一个能读懂自己的人，是妹子的想法，也同样是我的想法。生活那么匆忙，人来人往中都是匆匆掠过，可能掀起短暂的波澜，但并没有什么实质的影响。没有长久的相处就无法有深入的了解。一直对这事很谨慎，尽管口嗨想找妹子，但是确实是想慢慢的深入的去了解一个人。可惜生活并不是理想，身边的人越来越多结婚生子的，份子钱，晒娃，都在提醒我这个年纪了你怎么还是单身。所以焦急而又淡定，很矛盾的心理，我不想急急燥燥的定下人生后半旅程的伴侣，但是又无奈始终单身的现状。但是，真正碰到对的人，是快是慢？</p>
+<p>​        这是第一次网络相亲，不确定是否能和这个女生慢慢了解下去，也不确定以后是否还会经历这样的相亲，但是毕竟是第一次经历，记录一下。</p>
+<p><strong>关于股票</strong></p>
+<p>​        半年时间，收益从25%跌倒10%不到，贪婪是难以消除的劣根性，把期待寄托于市场以及他人的建议，不如自己研究制定良好的买卖策略，亏本不急躁，盈利不贪婪，在股市里保持良好的操盘心态。</p>
+<p>​        学习室的空气还是一样的闷热，坐久了就会让我头脑发胀，身边的人还是忙碌着。依旧是等待着毕业，等待着明天。</p>
+<p>​        一片杂文，没有逻辑，只是记录。</p>
+<p>​        嗨，好久没用博客了，忘记怎么上传了，又得折腾一点时间 = =。</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>生活，思考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>琐事2020.10.28</title>
+    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
+    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告。</p>
+<p>最怕自己的行为给别人的生活带来不好的影响。</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>生活，思考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>论文与汇报注意点</title>
+    <url>/2018/12/12/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%B1%87%E6%8A%A5%E6%B3%A8%E6%84%8F%E7%82%B9/</url>
+    <content><![CDATA[<h1 id="英文展示注意"><a href="#英文展示注意" class="headerlink" title="英文展示注意"></a>英文展示注意</h1><p>1、图的效果讲下就够，不一定要详细描述图的细节</p>
+<p>2、highlight重要的词</p>
+<p>3、英文冒号用的不多</p>
+<p>4、中英文标点符号统一</p>
+<p>5、ppt字号英文24及以上，中文18及以上</p>
+<p>6、英文报告ppt字体选择  arial  或者calibri</p>
+<p>6、字体颜色不要花里胡哨，常规一点</p>
+<p>7、放一张大的图，一个标题或一句话说明图的内容(在有很多图类似图的情况下)</p>
+<p>8、<strong>研究意义、创新性是最重要的</strong></p>
+<p>9、</p>
+<h1 id="论文写作注意"><a href="#论文写作注意" class="headerlink" title="论文写作注意"></a>论文写作注意</h1><h2 id="英文摘要部分"><a href="#英文摘要部分" class="headerlink" title="英文摘要部分"></a>英文摘要部分</h2><p>1、根据不同期刊，字数要求注意；</p>
+<p>2、</p>
+]]></content>
+      <categories>
+        <category>Writing</category>
+      </categories>
+      <tags>
+        <tag>论文写作, 汇报注意</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2020/11/27/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6/</url>
+    <content><![CDATA[<p>构建公司估值体系，行业分析方法</p>
+<p>1、PE，市盈</p>
+<p>2、年复合收益率=PEG=PE/主营业务利润增长率=PE/净利润增长率</p>
+<p>PEG&lt;0.5无脑买入阶段，&lt;1就是安全边际内</p>
+<p>可买入股票，20%主营业务增长，20%净资产收益率，30%一下资产负债比率，以及行业情况</p>
+<p>3、基本分析</p>
+<p>宏观，行业，公司</p>
+<p>A股75%情绪影响，25%公司绩效影响</p>
+<p>大盘整体PE的65左右时，基本到股市头部；</p>
+<p>4、投资带来的经济增长存在结构性问题：</p>
+<p>数据解读，20%投资增长带来10%经济增长</p>
+<p>5、投资过剩，需要去场能、库存、杠杆</p>
+<p>6、道氏理论-技术分析：</p>
+<p>主要趋势，次级趋势，短暂趋势</p>
+<p>3-5年，3-5个月（半年），3-5天</p>
+<p>7、产业资本减持，金融资本投入——股市拐点</p>
+<p>8、<img src="/2020/11/27/证券投资学/image-20201202191020958.png" alt="image-20201202191020958"></p>
+<p>9、国债收益率下滑，债券价格上扬</p>
+]]></content>
   </entry>
   <entry>
     <title>三维表型--骨架提取</title>
@@ -342,29 +401,6 @@ TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
       </categories>
       <tags>
         <tag>几何, 三维重建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>论文与汇报注意点</title>
-    <url>/2018/12/12/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%B1%87%E6%8A%A5%E6%B3%A8%E6%84%8F%E7%82%B9/</url>
-    <content><![CDATA[<h1 id="英文展示注意"><a href="#英文展示注意" class="headerlink" title="英文展示注意"></a>英文展示注意</h1><p>1、图的效果讲下就够，不一定要详细描述图的细节</p>
-<p>2、highlight重要的词</p>
-<p>3、英文冒号用的不多</p>
-<p>4、中英文标点符号统一</p>
-<p>5、ppt字号英文24及以上，中文18及以上</p>
-<p>6、英文报告ppt字体选择  arial  或者calibri</p>
-<p>6、字体颜色不要花里胡哨，常规一点</p>
-<p>7、放一张大的图，一个标题或一句话说明图的内容(在有很多图类似图的情况下)</p>
-<p>8、<strong>研究意义、创新性是最重要的</strong></p>
-<p>9、</p>
-<h1 id="论文写作注意"><a href="#论文写作注意" class="headerlink" title="论文写作注意"></a>论文写作注意</h1><h2 id="英文摘要部分"><a href="#英文摘要部分" class="headerlink" title="英文摘要部分"></a>英文摘要部分</h2><p>1、根据不同期刊，字数要求注意；</p>
-<p>2、</p>
-]]></content>
-      <categories>
-        <category>Writing</category>
-      </categories>
-      <tags>
-        <tag>论文写作, 汇报注意</tag>
       </tags>
   </entry>
   <entry>
