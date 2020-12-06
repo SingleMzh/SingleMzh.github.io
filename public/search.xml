@@ -22,7 +22,21 @@
         <category>股市</category>
       </categories>
       <tags>
-        <tag>炒股心得</tag>
+        <tag>股票</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Skeleton connect</title>
+    <url>/2020/12/04/Skeleton-connect/</url>
+    <content><![CDATA[<p><img src="/2020/12/04/Skeleton-connect/image-20201204145335371.png" alt="image-20201204145335371"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201204145348872.png" alt="image-20201204145348872"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201204173319000.png" alt="image-20201204173319000"></p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>几何, 三维重建, 植物</tag>
       </tags>
   </entry>
   <entry>
@@ -56,6 +70,19 @@
       </categories>
       <tags>
         <tag>几何, 三维重建, 植物</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>琐事2020.10.28</title>
+    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
+    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告。</p>
+<p>最怕自己的行为给别人的生活带来不好的影响。</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>生活，思考</tag>
       </tags>
   </entry>
   <entry>
@@ -109,23 +136,6 @@
       <tags>
         <tag>几何, 三维重建, 植物</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2018/12/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Others</category>
-      </categories>
   </entry>
   <entry>
     <title>农业三维重建应用框架</title>
@@ -227,6 +237,47 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2018/12/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>生活-学习-爱情</title>
+    <url>/2020/10/27/%E7%94%9F%E6%B4%BB-%E5%AD%A6%E4%B9%A0-%E7%88%B1%E6%83%85/</url>
+    <content><![CDATA[<p>本来想把这个个人主页做成技术站，现实是技术突破太慢，久久难以更新。嗨，反正是个人主页，想放什么放什么，也无所谓了。也是想来很久没写东西，近期生活枯燥而波动，个人情绪始终不是特别的高昂，稍稍记录一下。</p>
+<p><strong>有关学习</strong></p>
+<p>​        学习是我唯一坚持这么多年的事，但是实际上读研之后，更多的是在赶工赶进度，做导师的项目，完成导师的任务，一年下来真正静下心来好好学习的时间寥寥无几。也不全怪导师，从小到大一直在区域拔尖的学校学习，多多少少有点自傲。浮躁，焦虑，伴随我3年半的情绪始终是影响个人工作状态的两大因素，挥之不去。所幸，现实打脸的很快，我也不过是平平常常的普通人，膨胀的状态没有维持多久变气馁了下来，自信心挫败的感觉并不好受。每个人对生活的都有本质的态度，表面上的乐观并无法改变骨子里的悲观。所幸我认为人要死的有价值，所以我怕死，至少不会干出自杀这种事。这种不负责，不仁义。也所幸认识了子毅师兄。目前，还是慢慢找状态，沉静下来心来去学。社会很浮躁，适应社会却很违背本心，不适应社会又难以生存。也只能学习了。</p>
+<p><strong>有关生活</strong></p>
+<p>​        今年是特殊的一年，疫情毕业，再次感受到了别离。可能是上了年纪，以前是对到一个新的地方充满期待，现在则是希望一群朋友就呆在一个地方温馨和谐。但是生活别离才是常态。嗨，毕业的同学们，有机会再聚。小两级的师弟师妹们充满了活力，是青春的力量，偶尔跟他们一起活动感觉到了年轻的感觉。明明只大了2级，大概两三岁的样子，心态感觉就和他们差了好多。可能我适合安居一隅吧。很让我感动的是王唯师姐，让我感受到亲姐的感觉，很贴心很细心，少有的感动。生活还是这样波澜不惊，以前挺喜欢杭州的，但可能是因为这群朋友，现在朋友都陆陆续续开始他们新的人生了。我对杭州腻了。</p>
+<p><strong>有关爱情</strong></p>
+<p>​        这几天，堂哥给我介绍了一个在杭州工作的女生，可能是自信心挫败带来的轻微社恐，其实是在堂哥第二次跟我说的时候我才去加了那个女生。第一次经历网络相亲，很突然没准备也跃跃欲试。这可能也算是尝试新的东西？加了女生之后聊了两次，感觉女生很温柔，讲话令人感到舒服，自律优秀，也是文艺附加漂亮。第一印象很好，好到让我妄自菲薄。尽管读到博士，社会不少人对博士还是有一定认可，但是自己心里有数，自己只是普通人，学历并不代表一切。找一个能读懂自己的人，是妹子的想法，也同样是我的想法。生活那么匆忙，人来人往中都是匆匆掠过，可能掀起短暂的波澜，但并没有什么实质的影响。没有长久的相处就无法有深入的了解。一直对这事很谨慎，尽管口嗨想找妹子，但是确实是想慢慢的深入的去了解一个人。可惜生活并不是理想，身边的人越来越多结婚生子的，份子钱，晒娃，都在提醒我这个年纪了你怎么还是单身。所以焦急而又淡定，很矛盾的心理，我不想急急燥燥的定下人生后半旅程的伴侣，但是又无奈始终单身的现状。但是，真正碰到对的人，是快是慢？</p>
+<p>​        这是第一次网络相亲，不确定是否能和这个女生慢慢了解下去，也不确定以后是否还会经历这样的相亲，但是毕竟是第一次经历，记录一下。</p>
+<p><strong>关于股票</strong></p>
+<p>​        半年时间，收益从25%跌倒10%不到，贪婪是难以消除的劣根性，把期待寄托于市场以及他人的建议，不如自己研究制定良好的买卖策略，亏本不急躁，盈利不贪婪，在股市里保持良好的操盘心态。</p>
+<p>​        学习室的空气还是一样的闷热，坐久了就会让我头脑发胀，身边的人还是忙碌着。依旧是等待着毕业，等待着明天。</p>
+<p>​        一片杂文，没有逻辑，只是记录。</p>
+<p>​        嗨，好久没用博客了，忘记怎么上传了，又得折腾一点时间 = =。</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>生活，思考</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>深度学习-三维点云-植物表型</title>
     <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
@@ -264,40 +315,32 @@ I-a得到矩阵</script><p>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &
       </tags>
   </entry>
   <entry>
-    <title>生活-学习-爱情</title>
-    <url>/2020/10/27/%E7%94%9F%E6%B4%BB-%E5%AD%A6%E4%B9%A0-%E7%88%B1%E6%83%85/</url>
-    <content><![CDATA[<p>本来想把这个个人主页做成技术站，现实是技术突破太慢，久久难以更新。嗨，反正是个人主页，想放什么放什么，也无所谓了。也是想来很久没写东西，近期生活枯燥而波动，个人情绪始终不是特别的高昂，稍稍记录一下。</p>
-<p><strong>有关学习</strong></p>
-<p>​        学习是我唯一坚持这么多年的事，但是实际上读研之后，更多的是在赶工赶进度，做导师的项目，完成导师的任务，一年下来真正静下心来好好学习的时间寥寥无几。也不全怪导师，从小到大一直在区域拔尖的学校学习，多多少少有点自傲。浮躁，焦虑，伴随我3年半的情绪始终是影响个人工作状态的两大因素，挥之不去。所幸，现实打脸的很快，我也不过是平平常常的普通人，膨胀的状态没有维持多久变气馁了下来，自信心挫败的感觉并不好受。每个人对生活的都有本质的态度，表面上的乐观并无法改变骨子里的悲观。所幸我认为人要死的有价值，所以我怕死，至少不会干出自杀这种事。这种不负责，不仁义。也所幸认识了子毅师兄。目前，还是慢慢找状态，沉静下来心来去学。社会很浮躁，适应社会却很违背本心，不适应社会又难以生存。也只能学习了。</p>
-<p><strong>有关生活</strong></p>
-<p>​        今年是特殊的一年，疫情毕业，再次感受到了别离。可能是上了年纪，以前是对到一个新的地方充满期待，现在则是希望一群朋友就呆在一个地方温馨和谐。但是生活别离才是常态。嗨，毕业的同学们，有机会再聚。小两级的师弟师妹们充满了活力，是青春的力量，偶尔跟他们一起活动感觉到了年轻的感觉。明明只大了2级，大概两三岁的样子，心态感觉就和他们差了好多。可能我适合安居一隅吧。很让我感动的是王唯师姐，让我感受到亲姐的感觉，很贴心很细心，少有的感动。生活还是这样波澜不惊，以前挺喜欢杭州的，但可能是因为这群朋友，现在朋友都陆陆续续开始他们新的人生了。我对杭州腻了。</p>
-<p><strong>有关爱情</strong></p>
-<p>​        这几天，堂哥给我介绍了一个在杭州工作的女生，可能是自信心挫败带来的轻微社恐，其实是在堂哥第二次跟我说的时候我才去加了那个女生。第一次经历网络相亲，很突然没准备也跃跃欲试。这可能也算是尝试新的东西？加了女生之后聊了两次，感觉女生很温柔，讲话令人感到舒服，自律优秀，也是文艺附加漂亮。第一印象很好，好到让我妄自菲薄。尽管读到博士，社会不少人对博士还是有一定认可，但是自己心里有数，自己只是普通人，学历并不代表一切。找一个能读懂自己的人，是妹子的想法，也同样是我的想法。生活那么匆忙，人来人往中都是匆匆掠过，可能掀起短暂的波澜，但并没有什么实质的影响。没有长久的相处就无法有深入的了解。一直对这事很谨慎，尽管口嗨想找妹子，但是确实是想慢慢的深入的去了解一个人。可惜生活并不是理想，身边的人越来越多结婚生子的，份子钱，晒娃，都在提醒我这个年纪了你怎么还是单身。所以焦急而又淡定，很矛盾的心理，我不想急急燥燥的定下人生后半旅程的伴侣，但是又无奈始终单身的现状。但是，真正碰到对的人，是快是慢？</p>
-<p>​        这是第一次网络相亲，不确定是否能和这个女生慢慢了解下去，也不确定以后是否还会经历这样的相亲，但是毕竟是第一次经历，记录一下。</p>
-<p><strong>关于股票</strong></p>
-<p>​        半年时间，收益从25%跌倒10%不到，贪婪是难以消除的劣根性，把期待寄托于市场以及他人的建议，不如自己研究制定良好的买卖策略，亏本不急躁，盈利不贪婪，在股市里保持良好的操盘心态。</p>
-<p>​        学习室的空气还是一样的闷热，坐久了就会让我头脑发胀，身边的人还是忙碌着。依旧是等待着毕业，等待着明天。</p>
-<p>​        一片杂文，没有逻辑，只是记录。</p>
-<p>​        嗨，好久没用博客了，忘记怎么上传了，又得折腾一点时间 = =。</p>
+    <title>证券投资学（一）</title>
+    <url>/2020/12/06/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6/</url>
+    <content><![CDATA[<p>构建公司估值体系，行业分析方法</p>
+<p>1、PE，市盈</p>
+<p>2、年复合收益率=PEG=PE/主营业务利润增长率=PE/净利润增长率</p>
+<p>PEG&lt;0.5无脑买入阶段，&lt;1就是安全边际内</p>
+<p>可买入股票，20%主营业务增长，20%净资产收益率，30%一下资产负债比率，以及行业情况</p>
+<p>3、基本分析</p>
+<p>宏观，行业，公司</p>
+<p>A股75%情绪影响，25%公司绩效影响</p>
+<p>大盘整体PE的65左右时，基本到股市头部；</p>
+<p>4、投资带来的经济增长存在结构性问题：</p>
+<p>数据解读，20%投资增长带来10%经济增长</p>
+<p>5、投资过剩，需要去场能、库存、杠杆</p>
+<p>6、道氏理论-技术分析：</p>
+<p>主要趋势，次级趋势，短暂趋势</p>
+<p>3-5年，3-5个月（半年），3-5天</p>
+<p>7、产业资本减持，金融资本投入——股市拐点</p>
+<p>8、<img src="/2020/12/06/证券投资学/image-20201202191020958.png" alt="image-20201202191020958"></p>
+<p>9、国债收益率下滑，债券价格上扬</p>
 ]]></content>
       <categories>
-        <category>Life</category>
+        <category>理财</category>
       </categories>
       <tags>
-        <tag>生活，思考</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>琐事2020.10.28</title>
-    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
-    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告。</p>
-<p>最怕自己的行为给别人的生活带来不好的影响。</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>生活，思考</tag>
+        <tag>股票</tag>
       </tags>
   </entry>
   <entry>
@@ -324,27 +367,28 @@ I-a得到矩阵</script><p>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2020/11/27/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6/</url>
-    <content><![CDATA[<p>构建公司估值体系，行业分析方法</p>
-<p>1、PE，市盈</p>
-<p>2、年复合收益率=PEG=PE/主营业务利润增长率=PE/净利润增长率</p>
-<p>PEG&lt;0.5无脑买入阶段，&lt;1就是安全边际内</p>
-<p>可买入股票，20%主营业务增长，20%净资产收益率，30%一下资产负债比率，以及行业情况</p>
-<p>3、基本分析</p>
-<p>宏观，行业，公司</p>
-<p>A股75%情绪影响，25%公司绩效影响</p>
-<p>大盘整体PE的65左右时，基本到股市头部；</p>
-<p>4、投资带来的经济增长存在结构性问题：</p>
-<p>数据解读，20%投资增长带来10%经济增长</p>
-<p>5、投资过剩，需要去场能、库存、杠杆</p>
-<p>6、道氏理论-技术分析：</p>
-<p>主要趋势，次级趋势，短暂趋势</p>
-<p>3-5年，3-5个月（半年），3-5天</p>
-<p>7、产业资本减持，金融资本投入——股市拐点</p>
-<p>8、<img src="/2020/11/27/证券投资学/image-20201202191020958.png" alt="image-20201202191020958"></p>
-<p>9、国债收益率下滑，债券价格上扬</p>
+    <title>三维表型--聚类分割</title>
+    <url>/2020/10/29/%E8%81%9A%E7%B1%BB%E5%88%86%E5%89%B2/</url>
+    <content><![CDATA[<p>坐标xyz，RGB颜色，HSV空间颜色信息</p>
+<p>使用HSV色彩空间的有点是其每个属性都直接对应于基本色彩概念，这使得它在图像处理中变得简单</p>
+<p>三角植被指数，对于植株点云的分割：</p>
+<script type="math/tex; mode=display">
+TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
+<p>kmeans聚类</p>
+<h2 id="特征向量缩放"><a href="#特征向量缩放" class="headerlink" title="特征向量缩放"></a>特征向量缩放</h2><p>正定矩阵和半正定矩阵</p>
+<p>正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个正定矩阵</p>
+<p>半正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]">，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个半正定矩阵</p>
+<p>直观解释：</p>
+<p>若给定任意一个正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> .)</p>
+<p>若给定任意一个半正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于或等于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> .)</p>
+<p>协方差矩阵的特征向量控制旋转(rotation)，特征值控制尺度(scale)，</p>
 ]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>几何, 三维重建</tag>
+      </tags>
   </entry>
   <entry>
     <title>三维表型--骨架提取</title>
@@ -371,30 +415,6 @@ I-a得到矩阵</script><p>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &
 <p>改进分割</p>
 <p><img src="/2019/07/12/骨架提取/image-20201109143747994.png" alt="image-20201109143747994"></p>
 <p><img src="/2019/07/12/骨架提取/image-20201110092537670.png" alt="image-20201110092537670"></p>
-]]></content>
-      <categories>
-        <category>3DReconstruction</category>
-      </categories>
-      <tags>
-        <tag>几何, 三维重建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>三维表型--聚类分割</title>
-    <url>/2020/10/29/%E8%81%9A%E7%B1%BB%E5%88%86%E5%89%B2/</url>
-    <content><![CDATA[<p>坐标xyz，RGB颜色，HSV空间颜色信息</p>
-<p>使用HSV色彩空间的有点是其每个属性都直接对应于基本色彩概念，这使得它在图像处理中变得简单</p>
-<p>三角植被指数，对于植株点云的分割：</p>
-<script type="math/tex; mode=display">
-TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
-<p>kmeans聚类</p>
-<h2 id="特征向量缩放"><a href="#特征向量缩放" class="headerlink" title="特征向量缩放"></a>特征向量缩放</h2><p>正定矩阵和半正定矩阵</p>
-<p>正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个正定矩阵</p>
-<p>半正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]">，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个半正定矩阵</p>
-<p>直观解释：</p>
-<p>若给定任意一个正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> .)</p>
-<p>若给定任意一个半正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于或等于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> .)</p>
-<p>协方差矩阵的特征向量控制旋转(rotation)，特征值控制尺度(scale)，</p>
 ]]></content>
       <categories>
         <category>3DReconstruction</category>
