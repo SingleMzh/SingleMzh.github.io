@@ -13,11 +13,6 @@
 <p>​        其次，及时止损是非常重要的手段，在亏损的股出现亏损的苗头的时候，我其实是有足够的时间抛售减持减低损失的，但是因为个人的盲目判断以及详细股价能回涨的贪婪心理，导致止损不及时，造成重大亏损。股市赚钱可以，但是还是要设置心理的收益上限，赌徒心理最终也只会带来亏损。</p>
 <p>​        再者，平和的心态非常重要，在出现较大亏损的时候，我的心态就容易变得焦躁和慌乱，后续的买股就会变得盲目，缺少自己的主观判断，导致盲目跟风追高。还一方面也是因为时间经历有限，没有太多精力去研究股票变化。但是其实即便如此每天花在股市上的时间也不少。因此既然都这样了，不如花时间研究下个股的业绩和相关局势形式。高买低抛也是后续操作出现频繁亏损的一个重要原因，因此保持正常良好的心态非常重要。炒股目前阶段还是学习研究，也是锻炼心态的好时候。</p>
 <p>​        近期小结如此，后续考虑写一下更细节的个股买卖思路。</p>
-<p>流水：至11.19为止投入资金，其中9600是15年股本：</p>
-<p>20年股本：4000+2000+3000 +1500+3500 +2000+3000 +1600+3000+4000=9000+5000+5000+4600+4000=9000+10000+8600=27600+2600+4000=34200</p>
-<p>总股本：9600+34200=43600</p>
-<p>20年初始股本5000+34200=39200</p>
-<p>12月入股1500 总股本40700</p>
 ]]></content>
       <categories>
         <category>股市</category>
@@ -45,10 +40,10 @@
 <p><strong>均方误差MSE</strong></p>
 <script type="math/tex; mode=display">
 MSE=E[(θ ̂_m-θ)^2 ]=[Bias(θ ̂_m)]^2+Var(θ ̂_m)</script><p>等于贝叶斯误差+方差</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210513215217220.png" alt="image-20210513215217220"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210513215217220.png" alt="image-20210513215217220"></p>
 <p>残差网络：</p>
 <p>解决梯度消失问题：添加跳连接</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210517205049715.png" alt="image-20210517205049715"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210517205049715.png" alt="image-20210517205049715"></p>
 <p>导致问题：梯度爆炸</p>
 <p>深入：</p>
 <p>1、理论角度理解</p>
@@ -57,22 +52,22 @@ MSE=E[(θ ̂_m-θ)^2 ]=[Bias(θ ̂_m)]^2+Var(θ ̂_m)</script><p>等于贝叶斯
 <p>4、选择特定研究领域，阅读论文，研究框架，扩充视野</p>
 <p>RNN（循环神经网络）专门用来处理带有序列模式的数据，需要使用权重共享，减少训练的数量。处理具有序列关系的数据。天气、股市、自然语言NLP</p>
 <p>本质是线性层，与CNN的线性层的区别，是共享的</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518104813940.png" alt="image-20210518104813940"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518104813940.png" alt="image-20210518104813940"></p>
 <p>激活函数用tanh</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518110322586.png" alt="image-20210518110322586"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518135023149.png" alt="image-20210518135023149"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518110322586.png" alt="image-20210518110322586"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518135023149.png" alt="image-20210518135023149"></p>
 <p>第二种写法 </p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518150830731.png" alt="image-20210518150830731"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518150830731.png" alt="image-20210518150830731"></p>
 <p>要求</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518151805015.png" alt="image-20210518151805015"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518151850609.png" alt="image-20210518151850609"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518152015874.png" alt="image-20210518152015874"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518152056721.png" alt="image-20210518152056721"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518152114809.png" alt="image-20210518152114809"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518151805015.png" alt="image-20210518151805015"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518151850609.png" alt="image-20210518151850609"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518152015874.png" alt="image-20210518152015874"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518152056721.png" alt="image-20210518152056721"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518152114809.png" alt="image-20210518152114809"></p>
 <p>自然语言处理思路流程：</p>
 <p>第一步，字符级的，先根据字符构造字典，然后根据词典将数据变成索引，然后变成One-Hot向量。向量的列数与字典里字符的数量一直，</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518154337134.png" alt="image-20210518154337134"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210519152651271.png" alt="image-20210519152651271"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518154337134.png" alt="image-20210518154337134"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210519152651271.png" alt="image-20210519152651271"></p>
 <p>RNN+CNN计算损失</p>
 <p>独热向量缺点：</p>
 <p>1、维度太高</p>
@@ -132,20 +127,20 @@ MSE=E[(θ ̂_m-θ)^2 ]=[Bias(θ ̂_m)]^2+Var(θ ̂_m)</script><p>等于贝叶斯
 <p>问题1：通过距离进行约束的时候发现由于骨架点太多，导致邻域骨架在连接时存在重复问题，所以要进行resample</p>
 <p>多个连接点问题：</p>
 <p>投影距离计算有误？</p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213000554273.png" alt="image-20201213000554273"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213000612305.png" alt="image-20201213000612305"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213000627972.png" alt="image-20201213000627972"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213000718596.png" alt="image-20201213000718596"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213001129943.png" alt="image-20201213001129943"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213001143264.png" alt="image-20201213001143264"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213001215416.png" alt="image-20201213001215416"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213001253017.png" alt="image-20201213001253017"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213001312082.png" alt="image-20201213001312082"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213001318727.png" alt="image-20201213001318727"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213001343659.png" alt="image-20201213001343659"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213001354098.png" alt="image-20201213001354098"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213001407471.png" alt="image-20201213001407471"></p>
-<p><img src="/2020/12/04/Skeleton-connect/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201213001441061.png" alt="image-20201213001441061"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213000554273.png" alt="image-20201213000554273"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213000612305.png" alt="image-20201213000612305"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213000627972.png" alt="image-20201213000627972"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213000718596.png" alt="image-20201213000718596"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213001129943.png" alt="image-20201213001129943"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213001143264.png" alt="image-20201213001143264"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213001215416.png" alt="image-20201213001215416"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213001253017.png" alt="image-20201213001253017"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213001312082.png" alt="image-20201213001312082"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213001318727.png" alt="image-20201213001318727"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213001343659.png" alt="image-20201213001343659"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213001354098.png" alt="image-20201213001354098"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213001407471.png" alt="image-20201213001407471"></p>
+<p><img src="/2020/12/04/Skeleton-connect/image-20201213001441061.png" alt="image-20201213001441061"></p>
 ]]></content>
       <categories>
         <category>3DReconstruction</category>
@@ -205,6 +200,23 @@ MSE=E[(θ ̂_m-θ)^2 ]=[Bias(θ ̂_m)]^2+Var(θ ̂_m)</script><p>等于贝叶斯
       <tags>
         <tag>几何, 三维重建, 植物</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2018/12/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
   </entry>
   <entry>
     <title>农业三维重建应用框架</title>
@@ -306,23 +318,6 @@ MSE=E[(θ ̂_m-θ)^2 ]=[Bias(θ ̂_m)]^2+Var(θ ̂_m)</script><p>等于贝叶斯
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2018/12/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Others</category>
-      </categories>
-  </entry>
-  <entry>
     <title>深度学习-三维点云-植物表型</title>
     <url>/2019/11/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E4%B8%89%E7%BB%B4%E7%82%B9%E4%BA%91-%E6%A4%8D%E7%89%A9%E8%A1%A8%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="主要提取的点云特征："><a href="#主要提取的点云特征：" class="headerlink" title="主要提取的点云特征："></a>主要提取的点云特征：</h1><h2 id="一、主曲率"><a href="#一、主曲率" class="headerlink" title="一、主曲率"></a>一、主曲率</h2><p>点在平面的移动速度，陡峭程度；</p>
@@ -373,30 +368,6 @@ I-a得到矩阵</script><p>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &
       </tags>
   </entry>
   <entry>
-    <title>三维表型--聚类分割</title>
-    <url>/2020/10/29/%E8%81%9A%E7%B1%BB%E5%88%86%E5%89%B2/</url>
-    <content><![CDATA[<p>坐标xyz，RGB颜色，HSV空间颜色信息</p>
-<p>使用HSV色彩空间的有点是其每个属性都直接对应于基本色彩概念，这使得它在图像处理中变得简单</p>
-<p>三角植被指数，对于植株点云的分割：</p>
-<script type="math/tex; mode=display">
-TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
-<p>kmeans聚类</p>
-<h2 id="特征向量缩放"><a href="#特征向量缩放" class="headerlink" title="特征向量缩放"></a>特征向量缩放</h2><p>正定矩阵和半正定矩阵</p>
-<p>正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个正定矩阵</p>
-<p>半正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]">，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个半正定矩阵</p>
-<p>直观解释：</p>
-<p>若给定任意一个正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> .)</p>
-<p>若给定任意一个半正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于或等于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> .)</p>
-<p>协方差矩阵的特征向量控制旋转(rotation)，特征值控制尺度(scale)，</p>
-]]></content>
-      <categories>
-        <category>3DReconstruction</category>
-      </categories>
-      <tags>
-        <tag>几何, 三维重建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>生活-学习</title>
     <url>/2020/10/27/%E7%94%9F%E6%B4%BB-%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p>本来想把这个个人主页做成技术站，现实是技术突破太慢，久久难以更新。嗨，反正是个人主页，想放什么放什么，也无所谓了。也是想来很久没写东西，近期生活枯燥而波动，个人情绪始终不是特别的高昂，稍稍记录一下。</p>
@@ -441,6 +412,30 @@ TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
       </tags>
   </entry>
   <entry>
+    <title>三维表型--聚类分割</title>
+    <url>/2020/10/29/%E8%81%9A%E7%B1%BB%E5%88%86%E5%89%B2/</url>
+    <content><![CDATA[<p>坐标xyz，RGB颜色，HSV空间颜色信息</p>
+<p>使用HSV色彩空间的有点是其每个属性都直接对应于基本色彩概念，这使得它在图像处理中变得简单</p>
+<p>三角植被指数，对于植株点云的分割：</p>
+<script type="math/tex; mode=display">
+TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
+<p>kmeans聚类</p>
+<h2 id="特征向量缩放"><a href="#特征向量缩放" class="headerlink" title="特征向量缩放"></a>特征向量缩放</h2><p>正定矩阵和半正定矩阵</p>
+<p>正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> ，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个正定矩阵</p>
+<p>半正定矩阵：给定一个大小为 <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="[公式]"> 的实对称矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]">，若对于任意长度为 <img src="https://www.zhihu.com/equation?tex=n" alt="[公式]"> 的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> ，有 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> 恒成立，则矩阵 <img src="https://www.zhihu.com/equation?tex=A" alt="[公式]"> 是一个半正定矩阵</p>
+<p>直观解释：</p>
+<p>若给定任意一个正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个非零向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%3E0" alt="[公式]"> .)</p>
+<p>若给定任意一个半正定矩阵 <img src="https://www.zhihu.com/equation?tex=A%5Cin%5Cmathbb%7BR%7D%5E%7Bn%5Ctimes+n%7D" alt="[公式]"> 和一个向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> ，则两者相乘得到的向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7By%7D%3DA%5Cboldsymbol%7Bx%7D%5Cin%5Cmathbb%7BR%7D%5E%7Bn%7D" alt="[公式]"> 与向量 <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D" alt="[公式]"> 的夹角恒小于或等于 <img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpi%7D%7B2%7D" alt="[公式]"> . (等价于： <img src="https://www.zhihu.com/equation?tex=%5Cboldsymbol%7Bx%7D%5ETA%5Cboldsymbol%7Bx%7D%5Cgeq0" alt="[公式]"> .)</p>
+<p>协方差矩阵的特征向量控制旋转(rotation)，特征值控制尺度(scale)，</p>
+]]></content>
+      <categories>
+        <category>3DReconstruction</category>
+      </categories>
+      <tags>
+        <tag>几何, 三维重建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>证券投资学(一)</title>
     <url>/2020/12/06/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6(%E4%B8%80)/</url>
     <content><![CDATA[<p>构建公司估值体系，行业分析方法</p>
@@ -459,7 +454,7 @@ TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
 <p>主要趋势，次级趋势，短暂趋势</p>
 <p>3-5年，3-5个月（半年），3-5天</p>
 <p>7、产业资本减持，金融资本投入——股市拐点</p>
-<p>8、<img src="/2020/12/06/证券投资学(一)/证券投资学/image-20201202191020958.png" alt="image-20201202191020958"></p>
+<p>8、<img src="/2020/12/06/证券投资学(一)/image-20201202191020958.png" alt="image-20201202191020958"></p>
 <p>9、国债收益率下滑，债券价格上扬</p>
 ]]></content>
       <categories>

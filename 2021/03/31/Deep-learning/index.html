@@ -417,10 +417,10 @@ height:50vh;
 <p><strong>均方误差MSE</strong></p>
 <script type="math/tex; mode=display">
 MSE=E[(θ ̂_m-θ)^2 ]=[Bias(θ ̂_m)]^2+Var(θ ̂_m)</script><p>等于贝叶斯误差+方差</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210513215217220.png" alt="image-20210513215217220"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210513215217220.png" alt="image-20210513215217220"></p>
 <p>残差网络：</p>
 <p>解决梯度消失问题：添加跳连接</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210517205049715.png" alt="image-20210517205049715"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210517205049715.png" alt="image-20210517205049715"></p>
 <p>导致问题：梯度爆炸</p>
 <p>深入：</p>
 <p>1、理论角度理解</p>
@@ -429,22 +429,22 @@ MSE=E[(θ ̂_m-θ)^2 ]=[Bias(θ ̂_m)]^2+Var(θ ̂_m)</script><p>等于贝叶斯
 <p>4、选择特定研究领域，阅读论文，研究框架，扩充视野</p>
 <p>RNN（循环神经网络）专门用来处理带有序列模式的数据，需要使用权重共享，减少训练的数量。处理具有序列关系的数据。天气、股市、自然语言NLP</p>
 <p>本质是线性层，与CNN的线性层的区别，是共享的</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518104813940.png" alt="image-20210518104813940"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518104813940.png" alt="image-20210518104813940"></p>
 <p>激活函数用tanh</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518110322586.png" alt="image-20210518110322586"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518135023149.png" alt="image-20210518135023149"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518110322586.png" alt="image-20210518110322586"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518135023149.png" alt="image-20210518135023149"></p>
 <p>第二种写法 </p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518150830731.png" alt="image-20210518150830731"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518150830731.png" alt="image-20210518150830731"></p>
 <p>要求</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518151805015.png" alt="image-20210518151805015"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518151850609.png" alt="image-20210518151850609"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518152015874.png" alt="image-20210518152015874"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518152056721.png" alt="image-20210518152056721"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518152114809.png" alt="image-20210518152114809"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518151805015.png" alt="image-20210518151805015"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518151850609.png" alt="image-20210518151850609"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518152015874.png" alt="image-20210518152015874"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518152056721.png" alt="image-20210518152056721"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518152114809.png" alt="image-20210518152114809"></p>
 <p>自然语言处理思路流程：</p>
 <p>第一步，字符级的，先根据字符构造字典，然后根据词典将数据变成索引，然后变成One-Hot向量。向量的列数与字典里字符的数量一直，</p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210518154337134.png" alt="image-20210518154337134"></p>
-<p><img src="/2021/03/31/Deep-learning/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20210519152651271.png" alt="image-20210519152651271"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210518154337134.png" alt="image-20210518154337134"></p>
+<p><img src="/2021/03/31/Deep-learning/image-20210519152651271.png" alt="image-20210519152651271"></p>
 <p>RNN+CNN计算损失</p>
 <p>独热向量缺点：</p>
 <p>1、维度太高</p>
@@ -462,7 +462,7 @@ MSE=E[(θ ̂_m-θ)^2 ]=[Bias(θ ̂_m)]^2+Var(θ ̂_m)</script><p>等于贝叶斯
             <p>原文作者：<a href="https://singlemzh.github.io">MZH</a>
             </p><p>原文链接：<a href="https://singlemzh.github.io/2021/03/31/Deep-learning/">https://singlemzh.github.io/2021/03/31/Deep-learning/</a>
             </p><p>发表日期：<a href="https://singlemzh.github.io/2021/03/31/Deep-learning/">March 31st 2021, 3:35:34 pm</a>
-            </p><p>更新日期：<a href="https://singlemzh.github.io/2021/03/31/Deep-learning/">June 2nd 2021, 9:49:42 am</a>
+            </p><p>更新日期：<a href="https://singlemzh.github.io/2021/03/31/Deep-learning/">August 31st 2021, 4:45:57 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -937,11 +937,11 @@ MSE=E[(θ ̂_m-θ)^2 ]=[Bias(θ ̂_m)]^2+Var(θ ̂_m)</script><p>等于贝叶斯
     
         <span class="sidebar-tag-name" data-tags="三维重建, 植物"><span class="iconfont-archer">&#xe606;</span>三维重建, 植物</span>
     
-        <span class="sidebar-tag-name" data-tags="几何, 三维重建"><span class="iconfont-archer">&#xe606;</span>几何, 三维重建</span>
-    
         <span class="sidebar-tag-name" data-tags="生活，思考"><span class="iconfont-archer">&#xe606;</span>生活，思考</span>
     
         <span class="sidebar-tag-name" data-tags="论文写作, 汇报注意"><span class="iconfont-archer">&#xe606;</span>论文写作, 汇报注意</span>
+    
+        <span class="sidebar-tag-name" data-tags="几何, 三维重建"><span class="iconfont-archer">&#xe606;</span>几何, 三维重建</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
