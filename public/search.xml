@@ -373,40 +373,6 @@ I-a得到矩阵</script><p>a = \left[<br>\matrix{<br>1-nix·nix &amp; nix·niy &
       </tags>
   </entry>
   <entry>
-    <title>琐事2020.10.28</title>
-    <url>/2020/10/28/%E7%90%90%E4%BA%8B2020-10-2888/</url>
-    <content><![CDATA[<p>今天终于搞定了繁琐的文档工作，开题报告，读书报告。</p>
-<p>最怕自己的行为给别人的生活带来不好的影响。</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>生活，思考</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>生活-学习</title>
-    <url>/2020/10/27/%E7%94%9F%E6%B4%BB-%E5%AD%A6%E4%B9%A0-%E7%88%B1%E6%83%85/</url>
-    <content><![CDATA[<p>本来想把这个个人主页做成技术站，现实是技术突破太慢，久久难以更新。嗨，反正是个人主页，想放什么放什么，也无所谓了。也是想来很久没写东西，近期生活枯燥而波动，个人情绪始终不是特别的高昂，稍稍记录一下。</p>
-<p><strong>有关学习</strong></p>
-<p>​        学习是我唯一坚持这么多年的事，但是实际上读研之后，更多的是在赶工赶进度，做导师的项目，完成导师的任务，一年下来真正静下心来好好学习的时间寥寥无几。也不全怪导师，从小到大一直在区域拔尖的学校学习，多多少少有点自傲。浮躁，焦虑，伴随我3年半的情绪始终是影响个人工作状态的两大因素，挥之不去。所幸，现实打脸的很快，我也不过是平平常常的普通人，膨胀的状态没有维持多久变气馁了下来，自信心挫败的感觉并不好受。每个人对生活的都有本质的态度，表面上的乐观并无法改变骨子里的悲观。所幸我认为人要死的有价值，所以我怕死，至少不会干出自杀这种事。这种不负责，不仁义。也所幸认识了子毅师兄。目前，还是慢慢找状态，沉静下来心来去学。社会很浮躁，适应社会却很违背本心，不适应社会又难以生存。也只能学习了。</p>
-<p><strong>有关生活</strong></p>
-<p>​        今年是特殊的一年，疫情毕业，再次感受到了别离。可能是上了年纪，以前是对到一个新的地方充满期待，现在则是希望一群朋友就呆在一个地方温馨和谐。但是生活别离才是常态。嗨，毕业的同学们，有机会再聚。小两级的师弟师妹们充满了活力，是青春的力量，偶尔跟他们一起活动感觉到了年轻的感觉。明明只大了2级，大概两三岁的样子，心态感觉就和他们差了好多。可能我适合安居一隅吧。很让我感动的是王唯师姐，让我感受到亲姐的感觉，很贴心很细心，少有的感动。生活还是这样波澜不惊，以前挺喜欢杭州的，但可能是因为这群朋友，现在朋友都陆陆续续开始他们新的人生了。我对杭州腻了。</p>
-<p><strong>关于股票</strong></p>
-<p>​        半年时间，收益从25%跌倒10%不到，贪婪是难以消除的劣根性，把期待寄托于市场以及他人的建议，不如自己研究制定良好的买卖策略，亏本不急躁，盈利不贪婪，在股市里保持良好的操盘心态。</p>
-<p>​        学习室的空气还是一样的闷热，坐久了就会让我头脑发胀，身边的人还是忙碌着。依旧是等待着毕业，等待着明天。</p>
-<p>​        一片杂文，没有逻辑，只是记录。</p>
-<p>​        嗨，好久没用博客了，忘记怎么上传了，又得折腾一点时间 = =。</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>生活，思考</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>三维表型--聚类分割</title>
     <url>/2020/10/29/%E8%81%9A%E7%B1%BB%E5%88%86%E5%89%B2/</url>
     <content><![CDATA[<p>坐标xyz，RGB颜色，HSV空间颜色信息</p>
@@ -431,15 +397,25 @@ TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2020/12/28/%E8%AE%BA%E6%96%87%E6%94%B9%E7%A8%BF/</url>
-    <content><![CDATA[<p><img src="/2020/12/28/论文改稿/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201228165046884.png" alt="image-20201228165046884"></p>
-<p>1、The problem formulation should be highlighted.<br>2、The reviewer advise that the author could show their algorithm by a flow chart.<br>3、Does the author mean that Fig 3 (c)  and (a) represent the parallel and intersect relationship, (b) represents that the triangles are neither parallel nor intersect?</p>
-<p><img src="/2020/12/28/论文改稿/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201228165304909.png" alt="image-20201228165304909"></p>
-<p>1.- Manuscript only shows the results for one plant. It would be better to introduce different capture scenarios. If not, you should indicate / explain in both the title and the text that these are preliminary results.<br>2.- The results are shown as a set of tables and figures without a detailed explanation, you should rewrite this section completely.<br>3.- You should indicate the processing time used. My experiences and what other colleagues have told me is that you have millions of points that make it a long time-processing.<br>4.- Can it be used in a real case? your results only show a plant in a laboratory, far from what would be a test outdoors.</p>
-<p><strong>Manuscript:</strong><br>5.- Introduction does not describe active and passive sensors. It should make this difference. Furthermore, within the passive ones they should introduce references and show the state of the art of these sensors.<br>6.- There are figures with different sub-indices that are not referenced in the text. For example in figure 1, the sub-figure 1.a should be linked in the sentence “The Kinect v2 was about…”. Keep this comment in mind for the whole document. In addition, you should use the template document where the number of lines appears for better review.<br>At the end of section 2.2.1 add a reference to Geomagic Studio.<br>7.- Section 2.2.3, add references in definitions 1, 2 and 3 to figure 3.<br>8.- Sorry, I do not understand what is meant in the text by abc and mnq.<br>9.- Table 1. Indicate in the test number the algorithm used.<br>10.- Figure 4 is not referenced in the text.<br>11.- Figures 4 and 5 are not well explained in the text.<br>12.- Table 2, same comment as in Table 1.<br>13.- Figure 6. The title of the figure is a little chaotic and difficult to understand.<br>14.- Table 3, same comment as in Table 1.<br>15.- In your conclusions you wrote that the proposed method offers accurate data  of plants. In this sense it must be taken into account that the test is not a real scenario of a crop. Thus:<br>a) How do you think the use of this method in a crop can affect your results?<br>b) How can it affect having a non-plain and constant background?<br>c) What is the influence of having different plants lined up?</p>
-<p><img src="/2020/12/28/论文改稿/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201229205306088.png" alt="image-20201229205306088"></p>
+    <title>生活-学习</title>
+    <url>/2020/10/27/%E7%94%9F%E6%B4%BB-%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>本来想把这个个人主页做成技术站，现实是技术突破太慢，久久难以更新。嗨，反正是个人主页，想放什么放什么，也无所谓了。也是想来很久没写东西，近期生活枯燥而波动，个人情绪始终不是特别的高昂，稍稍记录一下。</p>
+<p><strong>有关学习</strong></p>
+<p>​        学习是我唯一坚持这么多年的事，但是实际上读研之后，更多的是在赶工赶进度，做导师的项目，完成导师的任务，一年下来真正静下心来好好学习的时间寥寥无几。也不全怪导师，从小到大一直在区域拔尖的学校学习，多多少少有点自傲。浮躁，焦虑，伴随我3年半的情绪始终是影响个人工作状态的两大因素，挥之不去。所幸，现实打脸的很快，我也不过是平平常常的普通人，膨胀的状态没有维持多久变气馁了下来，自信心挫败的感觉并不好受。每个人对生活的都有本质的态度，表面上的乐观并无法改变骨子里的悲观。所幸我认为人要死的有价值，所以我怕死，至少不会干出自杀这种事。这种不负责，不仁义。也所幸认识了子毅师兄。目前，还是慢慢找状态，沉静下来心来去学。社会很浮躁，适应社会却很违背本心，不适应社会又难以生存。也只能学习了。</p>
+<p><strong>有关生活</strong></p>
+<p>​        今年是特殊的一年，疫情毕业，再次感受到了别离。可能是上了年纪，以前是对到一个新的地方充满期待，现在则是希望一群朋友就呆在一个地方温馨和谐。但是生活别离才是常态。嗨，毕业的同学们，有机会再聚。小两级的师弟师妹们充满了活力，是青春的力量，偶尔跟他们一起活动感觉到了年轻的感觉。明明只大了2级，大概两三岁的样子，心态感觉就和他们差了好多。可能我适合安居一隅吧。很让我感动的是王唯师姐，让我感受到亲姐的感觉，很贴心很细心，少有的感动。生活还是这样波澜不惊，以前挺喜欢杭州的，但可能是因为这群朋友，现在朋友都陆陆续续开始他们新的人生了。我对杭州腻了。</p>
+<p><strong>关于股票</strong></p>
+<p>​        半年时间，收益从25%跌倒10%不到，贪婪是难以消除的劣根性，把期待寄托于市场以及他人的建议，不如自己研究制定良好的买卖策略，亏本不急躁，盈利不贪婪，在股市里保持良好的操盘心态。</p>
+<p>​        学习室的空气还是一样的闷热，坐久了就会让我头脑发胀，身边的人还是忙碌着。依旧是等待着毕业，等待着明天。</p>
+<p>​        一片杂文，没有逻辑，只是记录。</p>
+<p>​        嗨，好久没用博客了，忘记怎么上传了，又得折腾一点时间 = =。</p>
 ]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>生活，思考</tag>
+      </tags>
   </entry>
   <entry>
     <title>论文与汇报注意点</title>
@@ -465,8 +441,37 @@ TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2021/01/07/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6(%E4%B8%89)/</url>
+    <title>证券投资学(一)</title>
+    <url>/2020/12/06/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6(%E4%B8%80)/</url>
+    <content><![CDATA[<p>构建公司估值体系，行业分析方法</p>
+<p>1、PE，市盈</p>
+<p>2、年复合收益率=PEG=PE/主营业务利润增长率=PE/净利润增长率</p>
+<p>PEG&lt;0.5无脑买入阶段，&lt;1就是安全边际内</p>
+<p>可买入股票，20%主营业务增长，20%净资产收益率，30%一下资产负债比率，以及行业情况</p>
+<p>3、基本分析</p>
+<p>宏观，行业，公司</p>
+<p>A股75%情绪影响，25%公司绩效影响</p>
+<p>大盘整体PE的65左右时，基本到股市头部；</p>
+<p>4、投资带来的经济增长存在结构性问题：</p>
+<p>数据解读，20%投资增长带来10%经济增长</p>
+<p>5、投资过剩，需要去场能、库存、杠杆</p>
+<p>6、道氏理论-技术分析：</p>
+<p>主要趋势，次级趋势，短暂趋势</p>
+<p>3-5年，3-5个月（半年），3-5天</p>
+<p>7、产业资本减持，金融资本投入——股市拐点</p>
+<p>8、<img src="/2020/12/06/证券投资学(一)/证券投资学/image-20201202191020958.png" alt="image-20201202191020958"></p>
+<p>9、国债收益率下滑，债券价格上扬</p>
+]]></content>
+      <categories>
+        <category>理财</category>
+      </categories>
+      <tags>
+        <tag>股票</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>证券投资学(三)</title>
+    <url>/2021/01/17/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6(%E4%B8%89)/</url>
     <content><![CDATA[<p>以下的股有我妈以及我哥推荐的也有和几个炒股同学共同研究的。</p>
 <p><strong>光伏以及新能源：</strong></p>
 <p>这段时间大涨，短期有回调风险，长期看好，考虑到碳中和，全球气候协议这些国际政策因素</p>
@@ -501,28 +506,24 @@ TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
 <p>其他军工类似002625光启科技这种有张有跌。</p>
 <p>目前总体股市感觉抄底难，只能买一些震荡股，或者追高涨的好的股，不少古跌下来后就回不去。</p>
 ]]></content>
+      <categories>
+        <category>理财</category>
+      </categories>
+      <tags>
+        <tag>股票</tag>
+      </tags>
   </entry>
   <entry>
-    <title>证券投资学(一)</title>
-    <url>/2020/12/06/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6(%E4%B8%80)/</url>
-    <content><![CDATA[<p>构建公司估值体系，行业分析方法</p>
-<p>1、PE，市盈</p>
-<p>2、年复合收益率=PEG=PE/主营业务利润增长率=PE/净利润增长率</p>
-<p>PEG&lt;0.5无脑买入阶段，&lt;1就是安全边际内</p>
-<p>可买入股票，20%主营业务增长，20%净资产收益率，30%一下资产负债比率，以及行业情况</p>
-<p>3、基本分析</p>
-<p>宏观，行业，公司</p>
-<p>A股75%情绪影响，25%公司绩效影响</p>
-<p>大盘整体PE的65左右时，基本到股市头部；</p>
-<p>4、投资带来的经济增长存在结构性问题：</p>
-<p>数据解读，20%投资增长带来10%经济增长</p>
-<p>5、投资过剩，需要去场能、库存、杠杆</p>
-<p>6、道氏理论-技术分析：</p>
-<p>主要趋势，次级趋势，短暂趋势</p>
-<p>3-5年，3-5个月（半年），3-5天</p>
-<p>7、产业资本减持，金融资本投入——股市拐点</p>
-<p>8、<img src="/2020/12/06/证券投资学(一)/证券投资学/image-20201202191020958.png" alt="image-20201202191020958"></p>
-<p>9、国债收益率下滑，债券价格上扬</p>
+    <title>证券投资学(二)</title>
+    <url>/2020/12/06/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6(%E4%BA%8C)/</url>
+    <content><![CDATA[<p>技术性熊市：两个季度内下跌幅度超过20%</p>
+<p><img src="/2020/12/06/证券投资学(二)/证券投资学(二" alt="image-20201206152828283">/image-20201206152828283.png)</p>
+<p>一级熔断后暂停15分钟，又开启</p>
+<p>二级熔断后暂停15分钟，又开启</p>
+<p>一级和二级一天只处罚一次，若二级熔断后只要不超过三级都不影响交易</p>
+<p>三级熔断后，股市当天交易停止</p>
+<p>期望收益率R=无风险收益率+风险溢价(风险补偿)</p>
+<p>10年期国债当做无风险收益率去吃30 </p>
 ]]></content>
       <categories>
         <category>理财</category>
@@ -565,25 +566,6 @@ TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
       </tags>
   </entry>
   <entry>
-    <title>证券投资学(二)</title>
-    <url>/2020/12/06/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6(%E4%BA%8C)/</url>
-    <content><![CDATA[<p>技术性熊市：两个季度内下跌幅度超过20%</p>
-<p><img src="/2020/12/06/证券投资学(二)/证券投资学(二" alt="image-20201206152828283">/image-20201206152828283.png)</p>
-<p>一级熔断后暂停15分钟，又开启</p>
-<p>二级熔断后暂停15分钟，又开启</p>
-<p>一级和二级一天只处罚一次，若二级熔断后只要不超过三级都不影响交易</p>
-<p>三级熔断后，股市当天交易停止</p>
-<p>期望收益率R=无风险收益率+风险溢价(风险补偿)</p>
-<p>10年期国债当做无风险收益率去吃30 </p>
-]]></content>
-      <categories>
-        <category>理财</category>
-      </categories>
-      <tags>
-        <tag>股票</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>三维表型--网格孔洞识别填补(一)————孔洞识别</title>
     <url>/2019/04/22/Note1/</url>
     <content><![CDATA[<h1 id="半边排序-填补孔洞"><a href="#半边排序-填补孔洞" class="headerlink" title="半边排序-填补孔洞"></a>半边排序-填补孔洞</h1><h3 id="记录如何得到半边的逻辑"><a href="#记录如何得到半边的逻辑" class="headerlink" title="记录如何得到半边的逻辑"></a>记录如何得到半边的逻辑</h3><p>根据delauney算法，若一条边最多被两个面共用，若一条边只被共用一次那么即为半边，只有半边可以形成孔洞，需要定义边类型，和半边类型</p>
@@ -622,18 +604,5 @@ TGI=-0.5×[0.19(R-G)-0.12(R-B)]</script><p>Hog3D</p>
       <tags>
         <tag>几何, 三维重建, 植物</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2020/12/20/%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6(%E4%BA%8C)/%E6%9C%AA%E5%91%BD%E5%90%8D/</url>
-    <content><![CDATA[<p><img src="/2020/12/20/证券投资学(二)/未命名/C:/Users\zhihong\AppData\Roaming\Typora\typora-user-images\image-20201217232004639.png" alt="image-20201217232004639"></p>
-<p><img src="/2020/12/20/证券投资学(二)/未命名/C:/Users\zhihong\AppData\Roaming\Typora\typora-user-images\image-20201217233644690.png" alt="image-20201217233644690"></p>
-<p><img src="/2020/12/20/证券投资学(二)/未命名/C:/Users\zhihong\AppData\Roaming\Typora\typora-user-images\image-20201218001311840.png" alt="image-20201218001311840"></p>
-<p><img src="/2020/12/20/证券投资学(二)/未命名/C:/Users\zhihong\AppData\Roaming\Typora\typora-user-images\image-20201218005022454.png" alt="image-20201218005022454"></p>
-<p><img src="/2020/12/20/证券投资学(二)/未命名/C:/Users\zhihong\AppData\Roaming\Typora\typora-user-images\image-20201218005353749.png" alt="image-20201218005353749"></p>
-<p><img src="/2020/12/20/证券投资学(二)/未命名/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201223100344458.png" alt="image-20201223100344458"></p>
-<p><img src="/2020/12/20/证券投资学(二)/未命名/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201223100406981.png" alt="image-20201223100406981"></p>
-<p><img src="/2020/12/20/证券投资学(二)/未命名/C:/Users/zhihong/AppData/Roaming/Typora/typora-user-images/image-20201223100353454.png" alt="image-20201223100353454"></p>
-]]></content>
   </entry>
 </search>
